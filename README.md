@@ -74,12 +74,12 @@ Scrum Master:
 
 ## ID Visual
 - Cores:
-  #004AAD
-  #949CB5
-  #FF1616
-  #00FFFE
+  - #004AAD
+  - #949CB5
+  - #FF1616
+  - #00FFFE
 
 - Fontes Usadas na Logo:
-  Principal: Squartiqa
-  Secundária: Neue Einstellung Bold
+  - Principal: Squartiqa
+  - Secundária: Neue Einstellung Bold
 
