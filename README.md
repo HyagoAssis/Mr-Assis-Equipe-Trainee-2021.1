@@ -72,3 +72,14 @@ Scrum Master:
 
 - Para confirmar o merge: git push origin suabranch
 
+## ID Visual
+- Cores:
+  #004AAD
+  #949CB5
+  #FF1616
+  #00FFFE
+
+- Fontes Usadas na Logo:
+  Principal: Squartiqa
+  Secundária: Neue Einstellung Bold
+
