@@ -2,10 +2,10 @@
 ## Projeto Trainee, Code Jr, Grupo #, 2021.1
 
 Desenvolvedores:
-- 
-- 
-- 
-- 
+- Arthur Dias
+- Gabriela Machado
+- Pedro Leopoldo
+- Thiago Teixeira
 
 
 Scrum Master:
