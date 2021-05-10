@@ -1,5 +1,5 @@
 # Mr. Assis - Produtos e Reparos em Informática
-## Projeto Trainee, Code Jr, Grupo #, 2021.1
+## Projeto Trainee, Code Jr, Grupo 4, 2021.1
 
 Desenvolvedores:
 - Arthur Dias
