@@ -1,0 +1,86 @@
+
+.logo {
+    text-align: center;
+    background-color:yellow;
+}
+.imgequipe {
+    padding-top: 100px;
+    width: 40%;
+    padding-left:100px ;
+    float: left;
+}
+
+.quemsomostexto h1{
+    border-top: grey solid 3px;
+    padding-top:100px;
+    text-align: center;    
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+.quemsomostexto p{
+    font-family: 'Roboto', sans-serif;
+    padding-left:570px;
+    padding-right:50px;
+    text-indent: 10px;
+    padding-bottom: 50px;
+}
+
+.valores h1{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 30px;
+    padding-right: 570px;
+    border-top: grey solid 3px;   
+    text-align: center;    
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+
+.valores img{
+    float:right;
+    padding-right:100px ;
+}
+.valores ul{
+    font-family: 'Roboto', sans-serif;
+    padding-bottom:50px;
+}
+.nossaloja h1{
+    font-family: 'Roboto', sans-serif;
+    padding-top: 40px;   
+    padding-bottom:50px;
+    border-top: grey solid 3px;
+    text-align: center;    
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+.nossaloja img {
+    display: inline-block;
+    padding-left:50px;
+    width: 410px;
+    height: 300px;
+   
+}
+
+.gps img{
+    width: 5%;
+    float:left;
+}
+.gps h1{
+    border-top: grey solid 3px;
+    font-family: 'Roboto', sans-serif;
+    color:grey;
+    text-align:center;
+    padding-top: 30px;
+    padding-bottom:30px;
+
+}
+.gps h2 {
+    padding-right:300px;
+    float:right;
+    padding-top:20px;
+    color:blue;
+   
+}
+.gps iframe {   
+    width: 100%;
+    height: 500px;
+}
