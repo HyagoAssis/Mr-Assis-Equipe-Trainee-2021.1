@@ -2,11 +2,29 @@ body{
     font-family: 'Roboto', sans-serif !important;
 }
 
-.filtros{
-    margin-top: 2.5%;
-    margin-left: 9% !important;
-    margin-right: 7.5% !important;
-}
 .produtos{
     margin-left: 0 !important;
+}
+
+.botao-busca{
+    border-color: #021b3b !important;
+    color: black !important;
+}
+.botao-busca:hover{
+    background-color: #021b3b !important;
+    color: white !important;
+}
+.pag-ancora{
+    color: #021b3b !important;
+}
+.zoom{
+    overflow: hidden ;
+}
+.zoom img{
+    max-width: 100%;
+    transition: all 0.3s;
+}
+.zoom img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
 }
