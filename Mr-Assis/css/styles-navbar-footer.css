@@ -1,18 +1,35 @@
-html,body{
-	margin:0;
-	padding:0;
-}
+
 body{
 	font-family: 'Roboto', sans-serif;
 }
 .logo{
-	width: 300px;
+	width: 25%;
 }
 .navchanges{
+	font-size: 18px;
 	background-color: #021b3b !important;
 }
 .textnavbar {
-	padding-left: 550px;
-	padding-top: 50px;	
+	padding-left: 50%;
+	padding-top: 5%;		
+}
+.img2{
+	width: 80% ;
+	padding-top: 8%;
 	
 }
+
+@media (max-width: 1000px){
+	.logo{
+		width:40%;
+	}
+	.textnavbar{
+		padding-left: 3%;
+		padding-top: 2%;
+	}
+	.img2{
+		display:none;
+	}
+
+}
+
