@@ -1,86 +1,131 @@
 
 .logo {
     text-align: center;
-    background-color:yellow;
+    background-color:grey;
+}
+.equipegeral {
+    display: flex;
 }
 .imgequipe {
-    padding-top: 100px;
+    padding-top:5%;
     width: 40%;
-    padding-left:100px ;
-    float: left;
+    padding-left:5% ; 
 }
-
+.quemsomostexto {
+    width: 59%;
+}
 .quemsomostexto h1{
     border-top: grey solid 3px;
-    padding-top:100px;
+    padding-top:5%;
     text-align: center;    
     font-family: 'Roboto', sans-serif;
     color: grey;
 }
 .quemsomostexto p{
     font-family: 'Roboto', sans-serif;
-    padding-left:570px;
-    padding-right:50px;
+    padding-right:5%;
     text-indent: 10px;
-    padding-bottom: 50px;
+    padding-bottom: 7%;
+    margin-left: 10px;
+    text-align: justify;
 }
-
 .valores h1{
     font-family: 'Roboto', sans-serif;
-    padding-top: 30px;
-    padding-right: 570px;
+    padding-top: 3%;  
     border-top: grey solid 3px;   
     text-align: center;    
     font-family: 'Roboto', sans-serif;
     color: grey;
 }
-
 .valores img{
     float:right;
-    padding-right:100px ;
+    padding-right:5% ;
 }
 .valores ul{
     font-family: 'Roboto', sans-serif;
-    padding-bottom:50px;
+    padding-bottom:5%;
 }
 .nossaloja h1{
     font-family: 'Roboto', sans-serif;
-    padding-top: 40px;   
-    padding-bottom:50px;
+    padding-top: 3%;   
+    padding-bottom:3%;
     border-top: grey solid 3px;
     text-align: center;    
     font-family: 'Roboto', sans-serif;
     color: grey;
 }
-.nossaloja img {
-    display: inline-block;
-    padding-left:50px;
-    width: 410px;
-    height: 300px;
-   
+.nossaloja img {    
+    padding-left:2%;
+    width: 33%;
+    height: 33%;  
 }
-
 .gps img{
-    width: 5%;
-    float:left;
+    width: 5%;   
 }
 .gps h1{
     border-top: grey solid 3px;
     font-family: 'Roboto', sans-serif;
     color:grey;
     text-align:center;
-    padding-top: 30px;
-    padding-bottom:30px;
-
+    padding-top: 3%;
+    padding-bottom:2%;
 }
-.gps h2 {
-    padding-right:300px;
-    float:right;
-    padding-top:20px;
-    color:blue;
-   
+.gps h2 {   
+    /* float:right; */
+    padding-top:1%;
+    color:blue;   
 }
 .gps iframe {   
     width: 100%;
     height: 500px;
+}
+
+@media (max-width: 1000px) {
+    
+    .equipegeral {
+        display: block;
+    }
+    .quemsomostexto{
+        width: 99%;
+    }
+    .imgequipe {
+        width: 99%;
+    }
+    .quemsomostexto h1{
+        text-align: center;
+    }
+    .quemsomostexto p{
+        padding-left:3%;       
+    }
+    .valores h1{
+        text-align: center;
+        padding-right:0 ;
+    }
+    .nossaloja {
+        margin: auto;
+    }
+    .nossaloja img {       
+        width: 80%;
+        margin:auto;
+    }
+    .nossaloja {
+        text-align: center;        
+    }
+    .gps h2 {
+        font-size:15px;
+        text-align: center;        
+    }
+    .gps {
+        
+        text-align: center;
+    }
+    .h2imagem {
+        display: flex;
+        margin: auto;        
+    }
+    .h2imagem img {
+        width: 20px;
+        height: 20px;
+    }
+
 }
