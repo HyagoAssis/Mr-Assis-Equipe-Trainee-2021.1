@@ -5,6 +5,7 @@
 }
 .equipegeral {
     display: flex;
+    border-top: grey solid 3px;
 }
 .imgequipe {
     padding-top:5%;
@@ -15,7 +16,7 @@
     width: 59%;
 }
 .quemsomostexto h1{
-    border-top: grey solid 3px;
+    
     padding-top:5%;
     text-align: center;    
     font-family: 'Roboto', sans-serif;
