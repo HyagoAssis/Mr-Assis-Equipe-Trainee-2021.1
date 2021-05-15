@@ -3,7 +3,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 .logo{
-	width: 25%;
+	width: 20%;
 }
 .navchanges{
 	font-size: 18px;
@@ -11,15 +11,15 @@ body{
 }
 .textnavbar {
 	padding-left: 50%;
-	padding-top: 5%;		
+	padding-top: 3%;	
+	margin-bottom: 3%;
 }
 .img2{
 	width: 80% ;
-	padding-top: 8%;
-	
+	padding-top: 8%;	
 }
 
-@media (max-width: 1000px){
+@media (max-width: 100%){
 	.logo{
 		width:40%;
 	}
@@ -27,9 +27,7 @@ body{
 		padding-left: 3%;
 		padding-top: 2%;
 	}
-	.img2{
-		display:none;
-	}
+	
 
 }
 
