@@ -6,11 +6,13 @@
 .equipegeral {
     display: flex;
     border-top: grey solid 3px;
+    
 }
 .imgequipe {
-    padding-top:5%;
     width: 40%;
-    padding-left:5% ; 
+    padding-left:5% ;
+    padding-top:2%;
+    padding-bottom:2%; 
 }
 .quemsomostexto {
     width: 59%;
@@ -41,6 +43,8 @@
 .valores img{
     float:right;
     padding-right:5% ;
+    padding-top:1%;
+    padding-bottom:3%;
 }
 .valores ul{
     font-family: 'Roboto', sans-serif;
@@ -56,9 +60,11 @@
     color: grey;
 }
 .nossaloja img {    
-    padding-left:2%;
+    padding-left:1%;
+    padding-right:1% ;
     width: 33%;
-    height: 33%;  
+    height: 33%;
+    padding-bottom:3%;  
 }
 .gps img{
     width: 5%;   
@@ -72,7 +78,7 @@
     padding-bottom:2%;
 }
 .gps h2 {   
-    /* float:right; */
+    padding-left:10%;
     padding-top:1%;
     color:blue;   
 }
