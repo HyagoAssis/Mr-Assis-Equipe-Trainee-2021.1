@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Mr. Assis - Administrativo </title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/stylesadministrativa.css">
+    <!-- Link Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link rel="manifest" href="img/icons/site.webmanifest">
+  </head>
+
+  <body>
+
+    <!-- Modals -->
+
+    <div class="modal fade modal-delete" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+            <!--Content-->
+            <div class="modal-content text-center">
+                <!--Header-->
+                <div class="modal-header d-flex justify-content-center">
+                    <p class="heading">Tem certeza?</p>
+                </div>
+
+                <!--Body-->
+                <div class="modal-body">
+
+                    <img src="https://img.icons8.com/offices/30/000000/delete-sign.png">
+
+                </div>
+
+                <!--Footer-->
+                <div class="modal-footer flex-center">
+                    <a href="" class="btn  btn-outline-danger">Sim</a>
+                    <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">Não</a>
+                </div>
+            </div>
+            <!--/.Content-->
+        </div>
+    </div>
+    <!--Modal: modalConfirmDelete-->
+
+    <div class="modal fade bd-example-modal-xl modal-edit" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content modal-conteudo p-3">
+            <form>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Nome Produto</label>
+                  <input class="form-control" id="exampleFormControlInput1" placeholder="Nome Produto">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Preço</label>
+                    <input class="form-control" id="exampleFormControlInput2" placeholder="00,00">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Categorias</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>categoria1</option>
+                      <option>categoria2</option>
+                      <option>categoria3</option>
+                      <option>...</option>
+                    </select>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Decrição</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+              </form>
+          </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-xl modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content modal-conteudo p-3">
+            <img class="modal-img" src="img/computador.jpg" alt="Foto Produto">
+            <h2 class="modal-titulo">Nome Produto</h2>
+            <h3>Descrição</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nihil incidunt repellat, modi officia quidem molestiae porro magni iusto eaque quo, earum quae nemo facilis magnam doloribus repellendus dolorem laboriosam!</p>
+            <h3>Preço</h3>
+            <p>R$: 0,00</p>
+            <h3>Categorias</h3>
+            <p>categoria1 , categoria 2 ...</p>
+
+
+          </div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow position-static">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
+            <img src="img/Mr. Assis.png" alt="Logo Mr. Assis" class="img-fluid ">
+        </a>
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="#">Sair</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar position-static">
+          <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <span data-feather="home"></span>
+                  Dashboard <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="shopping-cart"></span>
+                  Produtos
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="users"></span>
+                  Usuários
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="layers"></span>
+                  Categorias
+                </a>
+              </li>
+            </ul>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+              <span>Saved reports</span>
+              <a class="d-flex align-items-center text-muted" href="#">
+                <span data-feather="plus-circle"></span>
+              </a>
+            </h6>
+            <ul class="nav flex-column mb-2">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Current month
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Last quarter
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Social engagement
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <span data-feather="file-text"></span>
+                  Year-end sale
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">Produtos</h1>
+          </div>
+
+          
+
+          <h2>Lista Produtos</h2>
+          <div class="table-responsive">
+            <table class="table table-striped table-sm text-center">
+              <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Header</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1,001</td>
+                  <td class="text-center">
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".modal-delete">
+                      <img src="https://img.icons8.com/offices/30/000000/delete-sign.png">
+                    </button>
+                    <button class="btn btn-primary" data-toggle="modal" data-target=".modal-edit">
+                        <img src="https://img.icons8.com/windows/32/000000/file-configuration.png">
+                    </button>
+                    <button class="btn btn-primary " data-toggle="modal" data-target=".modal-detalhes">
+                        Detalhes
+                    </button>
+                </td>
+                </tr>
+                <tr>
+                  <td>1,002</td>
+                  <td><button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button></td>
+                </tr>
+                </tbody>
+            </table>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
+
+    <!-- Graphs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          datasets: [{
+            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
+            lineTension: 0,
+            backgroundColor: 'transparent',
+            borderColor: '#007bff',
+            borderWidth: 4,
+            pointBackgroundColor: '#007bff'
+          }]
+        },
+        options: {
+          scales: {
+            yAxes: [{
+              ticks: {
+                beginAtZero: false
+              }
+            }]
+          },
+          legend: {
+            display: false,
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
