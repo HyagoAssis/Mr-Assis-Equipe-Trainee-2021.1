@@ -7,7 +7,9 @@ body {
     height: 16px;
     vertical-align: text-bottom;
   }
-  
+  .categorianame {
+    width: 60%;
+  }
   
   /*
    * Sidebar
