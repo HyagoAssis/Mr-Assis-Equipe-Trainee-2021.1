@@ -49,6 +49,26 @@
             <!--/.Content-->
         </div>
     </div>
+
+    <!-- Modal - Edit  -->
+    
+      <div class="modal fade bd-example-modal-lg modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-conteudo p-3">
+            <img class="modal-img" src="img/computador.jpg" alt="Foto Produto">
+            <h2 class="modal-titulo">Nome Produto</h2>
+            <h3>Descrição</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nihil incidunt repellat, modi officia quidem molestiae porro magni iusto eaque quo, earum quae nemo facilis magnam doloribus repellendus dolorem laboriosam!</p>
+            <h3>Preço</h3>
+            <p>R$: 0,00</p>
+            <h3>Categorias</h3>
+            <p>categoria1 , categoria 2 ...</p>
+
+
+          </div>
+        </div>
+      </div>
+
     <!--Modal: modalConfirmDelete-->
 
     <div class="modal fade bd-example-modal-lg modal-edit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -76,28 +96,21 @@
                   <label for="exampleFormControlTextarea1">Decrição</label>
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                 </div>
+                
+                <form>
+                  <div class="form-group">
+                    <label for="exampleFormControlFile1">Adicione uma foto do Produto</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
+                </form>
               </form>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+              </div>
           </div>
         </div>
     </div>
-
-    <div class="modal fade bd-example-modal-lg modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content modal-conteudo p-3">
-            <img class="modal-img" src="img/computador.jpg" alt="Foto Produto">
-            <h2 class="modal-titulo">Nome Produto</h2>
-            <h3>Descrição</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit nihil incidunt repellat, modi officia quidem molestiae porro magni iusto eaque quo, earum quae nemo facilis magnam doloribus repellendus dolorem laboriosam!</p>
-            <h3>Preço</h3>
-            <p>R$: 0,00</p>
-            <h3>Categorias</h3>
-            <p>categoria1 , categoria 2 ...</p>
-
-
-          </div>
-        </div>
-    </div>
-
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow position-static">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
