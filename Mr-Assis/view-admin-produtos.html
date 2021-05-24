@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
     <link rel="manifest" href="img/icons/site.webmanifest">
+    
   </head>
 
   <body>
@@ -50,8 +51,8 @@
     </div>
     <!--Modal: modalConfirmDelete-->
 
-    <div class="modal fade bd-example-modal-xl modal-edit" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade bd-example-modal-lg modal-edit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content modal-conteudo p-3">
             <form>
                 <div class="form-group">
@@ -80,8 +81,8 @@
         </div>
     </div>
 
-    <div class="modal fade bd-example-modal-xl modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-xl">
+    <div class="modal fade bd-example-modal-lg modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
           <div class="modal-content modal-conteudo p-3">
             <img class="modal-img" src="img/computador.jpg" alt="Foto Produto">
             <h2 class="modal-titulo">Nome Produto</h2>
@@ -177,41 +178,41 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-          <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          <div class="pt-3 pb-2 mb-3 border-bottom">
             <h1 class="h2">Produtos</h1>
           </div>
 
-          
+          <h2 class="h3 mt-4 mb-3">Criar Produto</h2>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Nome do Produto" aria-label="Nome Produto" aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Criar</button>
+              </div>
+          </div>
 
           <h2>Lista Produtos</h2>
           <div class="table-responsive">
-            <table class="table table-striped table-sm text-center">
+            <table class="table table-striped table-sm">
               <thead>
                 <tr>
-                    <th>Código</th>
-                    <th>Header</th>
+                  <th>Código</th>
+                  <th class="tabela-nome-produto">Nome</th>
+                  <th>Visualizar </th>
+                  <th>Editar </th>
+                  <th>Deletar </th>
+                  
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>1,001</td>
-                  <td class="text-center">
-                    <button class="btn btn-primary" data-toggle="modal" data-target=".modal-delete">
-                      <img src="https://img.icons8.com/offices/30/000000/delete-sign.png">
-                    </button>
-                    <button class="btn btn-primary" data-toggle="modal" data-target=".modal-edit">
-                        <img src="https://img.icons8.com/windows/32/000000/file-configuration.png">
-                    </button>
-                    <button class="btn btn-primary " data-toggle="modal" data-target=".modal-detalhes">
-                        Detalhes
-                    </button>
-                </td>
+                  <td>1</td>
+                  <td class="tabela-nome-produto">Computador</td>
+                  <td><input type="image"  data-toggle="modal" data-target=".modal-detalhes" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
+                  <td><input type="image"  data-toggle="modal" data-target=".modal-edit" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
+                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
                 </tr>
                 <tr>
-                  <td>1,002</td>
-                  <td><button class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Modal extra grande</button></td>
-                </tr>
-                </tbody>
+              </tbody>
             </table>
           </div>
         </main>
