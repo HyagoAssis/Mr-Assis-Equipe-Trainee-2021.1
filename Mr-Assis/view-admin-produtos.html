@@ -22,7 +22,7 @@
 
   <body>
 
-    <!-- Modals -->
+    <!-- Modals delete -->
 
     <div class="modal fade modal-delete" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
@@ -31,6 +31,9 @@
                 <!--Header-->
                 <div class="modal-header d-flex justify-content-center">
                     <p class="heading">Tem certeza?</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
 
                 <!--Body-->
@@ -50,11 +53,21 @@
         </div>
     </div>
 
-    <!-- Modal - Edit  -->
+    <!-- Modal - detalhes  -->
     
       <div class="modal fade bd-example-modal-lg modal-detalhes" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
+          
           <div class="modal-content modal-conteudo p-3">
+            
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Visualizar Produto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
+
             <img class="modal-img" src="img/computador.jpg" alt="Foto Produto">
             <h2 class="modal-titulo">Nome Produto</h2>
             <h3>Descrição</h3>
@@ -69,11 +82,19 @@
         </div>
       </div>
 
-    <!--Modal: modalConfirmDelete-->
+    <!--Modal:Edit-->
 
     <div class="modal fade bd-example-modal-lg modal-edit" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
+          
           <div class="modal-content modal-conteudo p-3">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Editar Produto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+          </div>
+
             <form>
                 <div class="form-group">
                   <label for="exampleFormControlInput1">Nome Produto</label>
