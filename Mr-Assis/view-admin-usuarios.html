@@ -17,6 +17,37 @@
   </head>
 
   <body>
+     <!-- Modals delete -->
+
+     <div class="modal fade modal-delete" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
+          <!--Content-->
+          <div class="modal-content text-center">
+              <!--Header-->
+              <div class="modal-header d-flex justify-content-center">
+                  <p class="heading">Tem certeza?</p>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+
+              <!--Body-->
+              <div class="modal-body">
+
+                  <img src="https://img.icons8.com/offices/30/000000/delete-sign.png">
+
+              </div>
+
+              <!--Footer-->
+              <div class="modal-footer flex-center">
+                  <a href="" class="btn  btn-outline-danger">Sim</a>
+                  <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">Não</a>
+              </div>
+          </div>
+          <!--/.Content-->
+      </div>
+  </div>
+    
 <!-- Modal -->
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg">
@@ -172,28 +203,28 @@
                   <td>Arthur</td>
                   <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
                   <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
+                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
                 </tr>
                 <tr>
                   <td>2</td>
                   <td>Gabriela</td>
                   <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
                   <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
+                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
                 </tr>
                 <tr>
                   <td>3</td>
                   <td>Pedro</td>
                   <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
                   <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
+                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
                 </tr>
                 <tr>
                   <td>4</td>
                   <td>Thiago</td>
                   <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
                   <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
+                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
                 </tr>
               </tbody>
             </table>
