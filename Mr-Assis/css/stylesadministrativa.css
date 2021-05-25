@@ -28,7 +28,11 @@ body {
     height: calc(100vh - 48px);
     padding-top: .5rem;
     overflow-x: hidden;
+<<<<<<< HEAD
+    overflow-y: auto; /*Scrollable contents if viewport is shorter than content. */
+=======
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+>>>>>>> main
   }
   
   @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -98,4 +102,51 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
   }
+<<<<<<< HEAD
   
+  #mySidebar #threeline-icon{
+    display: none;
+  }
+  #mySidebar .threeline-icon:hover{
+      cursor: pointer;
+  }
+
+  @media (max-width: 767px){
+
+    .sidebar-sticky li{
+      display: none;
+    }
+
+    #threeline-icon{
+      display: inline-block !important;
+      margin: 0 40% 30px 40%!important;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    #mySidebar{
+      height: auto;
+    }
+
+    /* Menu JS */
+    .menujs{
+        height: auto !important;
+    }
+
+    .menujs ul{
+        height: auto !important;
+        text-align: center !important;
+        padding: 0 15% !important;
+    }
+
+    .menujs li{
+        display: block !important;
+        border-bottom: solid grey 1px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+    
+}
+=======
+  
+>>>>>>> main
