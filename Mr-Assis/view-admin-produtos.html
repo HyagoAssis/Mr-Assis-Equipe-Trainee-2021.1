@@ -216,13 +216,13 @@
             <h1 class="h2">Produtos</h1>
           </div>
 
-          <h2 class="h3 mt-4 mb-3">Criar Produto</h2>
+          <!-- <h2 class="h3 mt-4 mb-3">Criar Produto</h2>
             <div class="input-group mb-3">
               <input type="text" class="form-control" placeholder="Nome do Produto" aria-label="Nome Produto" aria-describedby="button-addon2">
               <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Criar</button>
               </div>
-          </div>
+            </div> -->
 
           <h2>Lista Produtos</h2>
           <div class="table-responsive">
@@ -249,6 +249,43 @@
               </tbody>
             </table>
           </div>
+
+          <h2>Criar Produto</h2>
+          <form>
+            <div class="form-group">
+              <label for="inputAddress">Nome</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="Nome Produto">
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="exampleFormControlInput1">Preço</label>
+                <input type="number" class="form-control" id="exampleFormControlInput2" placeholder="00,00">
+              </div>
+              <div class="form-group col-md-6">
+                <label for="exampleFormControlSelect1">Categoria</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>categoria1</option>
+                  <option>categoria2</option>
+                  <option>categoria3</option>
+                  <option>...</option>
+                </select>
+              </div>
+            </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Decrição</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Foto</label>
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlFile1">Adicione a foto do Produto</label>
+                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+              </form>
+            </div>
+            <button type="submit" class="btn btn-primary">Criar</button>
+          </form>
         </main>
       </div>
     </div>
