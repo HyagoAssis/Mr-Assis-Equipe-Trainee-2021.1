@@ -28,11 +28,7 @@ body {
     height: calc(100vh - 48px);
     padding-top: .5rem;
     overflow-x: hidden;
-<<<<<<< HEAD
     overflow-y: auto; /*Scrollable contents if viewport is shorter than content. */
-=======
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
->>>>>>> main
   }
   
   @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -102,7 +98,6 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
   }
-<<<<<<< HEAD
   
   #mySidebar #threeline-icon{
     display: none;
@@ -147,6 +142,3 @@ body {
     }
     
 }
-=======
-  
->>>>>>> main
