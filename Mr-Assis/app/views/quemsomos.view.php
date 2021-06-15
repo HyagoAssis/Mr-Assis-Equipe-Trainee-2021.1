@@ -20,7 +20,7 @@
 
   <!--LOGO MR ASSIS-->
   <div class="logo">
-    <img src="img/Mr. Assis.png" class="img-fluid" alt="Imagem responsiva">
+    <img src="../../public/img/Mr.Assis.png" class="img-fluid" alt="Imagem responsiva">
   </div>
   <!--NAV BAR-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,7 +35,7 @@
   <!--Imagem da equipe do quem somos-->
   <div class="equipegeral">
   <div class="imgequipe">
-    <img src="img/group-of-people-working-out-business-plan-in-an-office.jpg" class="img-fluid" alt="Imagem responsiva">
+    <img src="../../public/img/group-of-people-working-out-business-plan-in-an-office.jpg" class="img-fluid" alt="Imagem responsiva">
   </div>
   <!--Quem somos texto-->
   <div class="quemsomostexto">
@@ -52,7 +52,7 @@
   </div>
   <!--Imagem da parte valores-->
   <div class="valores">
-    <img src="img/valores.png" class="img-fluid" alt="Imagem responsiva">
+    <img src="../../public/img/valores.png" class="img-fluid" alt="Imagem responsiva">
     <!--Texto dos valores-->
     <h1>Nossos Valores</h1>
     <ul>
@@ -70,9 +70,9 @@
   <div class="nossaloja justify-content-center">
     <h1>Nossa Loja</h1>
     <!--Imagens da loja-->
-    <img src="img/loja1.jpg" alt="...">
-    <img src="img/loja2.jpg" alt="...">
-    <img src="img/loja3.jpg" alt="...">
+    <img src="../../public/img/loja1.jpg" alt="...">
+    <img src="../../public/img/loja2.jpg" alt="...">
+    <img src="../../public/img/loja3.jpg" alt="...">
   </div>
   <!--Onde estamos -->
   <div class="gps justify-content-center">

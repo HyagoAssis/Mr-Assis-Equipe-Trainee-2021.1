@@ -3,6 +3,7 @@
 namespace App\Core\Database;
 
 use PDO;
+use Exception;
 
 class QueryBuilder
 {
@@ -14,5 +15,18 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
+    public function selectAll($table) {
 
+        $sql = "select * from {$table}";
+
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchALL(PDO::FETCH_CLASS);
+        }catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
 }

@@ -15,8 +15,7 @@
   <link rel="manifest" href="img/site.webmanifest">
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
   <link href="css/categorias.css" rel="stylesheet">
@@ -24,8 +23,7 @@
 
 <body>
   <!-- Modal -->
-  <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -50,8 +48,7 @@
     </div>
   </div>
   <!--Modal: modalConfirmDelete-->
-  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+  <div class="modal fade" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
       <!--Content-->
       <div class="modal-content text-center">
@@ -155,77 +152,51 @@
         </div>
       </nav>
       <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Digite o nome da categoria"
-              aria-label="Recipient's username" aria-describedby="button-addon2">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Criar</button>
-            </div>
+            <form action="/categorias/create" method="POST">
+              <input type="text" name="nome" class="form-control" placeholder="Digite o nome da categoria" aria-label="Recipient's username" aria-describedby="button-addon2">
+              <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit" id="button-addon2">Criar</button>
+            </form>
           </div>
         </div>
-
-        <h2>Categorias</h2>
-        <div class="table-responsive">
-          <table class="table table-striped table-sm">
-            <thead>
-              <tr>
-
-                <th class="categoriaid">#</th>
-                <th class="categorianame">Categoria</th>                
-                <th class="categoriaeditar">Editar</th>
-                <th class="categoriadeletar">Deletar</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="categoriaid">1</td>
-                <td class="categorianame">Monitor</td>               
-                <td class="categoriaeditar"><input type="image" data-toggle="modal" data-target="#modalExemplo"
-                    src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                <td class="categoriadeletar"><input type="image" data-toggle="modal" data-target="#modalConfirmDelete"
-                    src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
-                </td>
-              </tr>
-              <tr>
-                <td class="categoriaid">2</td>
-                <td class="categorianame">Teclado</td>               
-                <td class="categoriaeditar"><input type="image" data-toggle="modal" data-target="#modalExemplo"
-                    src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                <td class="categoriadeletar"><input type="image" data-toggle="modal" data-target="#modalConfirmDelete"
-                    src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
-                </td>
-              </tr>
-              <tr>
-                <td class="categoriaid">3</td>
-                <td class="categorianame">Mouse</td>               
-                <td class="categoriaeditar"><input type="image" data-toggle="modal" data-target="#modalExemplo"
-                    src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                <td class="categoriadeletar"><input type="image" data-toggle="modal" data-target="#modalConfirmDelete"
-                    src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
-                </td>
-              </tr>
-
-            </tbody>
-          </table>
-        </div>
-      </main>
     </div>
+
+    <h2>Categorias</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th class="categoriaid">#</th>
+            <th class="categorianame">Categoria</th>
+            <th class="categoriaeditar">Editar</th>
+            <th class="categoriadeletar">Deletar</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <?php foreach ($categorias as $categoria) : ?>
+            <tr>
+              <td class="id"><?= $categoria->id ?> </td>
+              <td class="name"><?= $categoria->name ?> </td>
+              <td class="categoriaeditar"><input type="image" data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
+              <td class="categoriadeletar"><input type="image" data-toggle="modal" data-target="#modalConfirmDelete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
+            </tr>
+          <?php endforeach; ?>
+        </tbody>
+      </table>
+    </div>
+    </main>
+  </div>
   </div>
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
   <!-- Icons -->
   <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
