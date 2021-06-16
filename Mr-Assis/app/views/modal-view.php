@@ -15,6 +15,8 @@
 
             <img class="modal-img" src="../../public/img/<?= $produto->imagem ?>" alt="Foto <?= $produto->nome ?>">
             <h2 class="modal-titulo"><?= $produto->nome ?></h2>
+            <h3>Quantidade</h3>
+            <p><?= $produto->quantidade ?></p>
             <h3>Descrição</h3>
             <p><?= $produto->descricao ?></p>
             <h3>Preço</h3>

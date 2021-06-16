@@ -15,22 +15,27 @@
 
                 <div class="form-group">
                   <label for="nome-produto-input">Nome Produto</label>
-                  <input class="form-control" id="nome-produto-input" name="nome" placeholder="Nome Produto" required>
+                  <input class="form-control" id="nome-produto-input" name="nome" placeholder="<?= $produto->nome ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label for="preco-produto-input">Preço</label>
-                    <input class="form-control" id="preco-produto-input" name="preco" placeholder="00.00" required>
+                    <input class="form-control" id="preco-produto-input" name="preco" placeholder="<?= $produto->preco ?>" required>
                 </div>
 
                 <div class="form-group">
                   <label for="categoria-produto-input">Categoria</label>
-                  <input type="text" name="categoria" class="form-control" name="categoria" id="categoria-produto-input" placeholder="Nome Categoria" required>
+                  <input type="text" name="categoria" class="form-control" name="categoria" id="categoria-produto-input" placeholder="<?= $produto->categoria ?>" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="input-quantidade-edit">Quantidade</label>
+                  <input type="number" name="quantidade" class="form-control" id="input-quantidade-edit" placeholder="<?= $produto->quantidade ?>" required>
                 </div>
 
                 <div class="form-group">
                   <label for="descricao-produto-input">Decrição</label>
-                  <textarea class="form-control" id="descricao-produto-input" name="descricao" rows="3" required></textarea>
+                  <textarea class="form-control" id="descricao-produto-input" name="descricao" rows="3" placeholder="<?= $produto->descricao ?>" required></textarea>
                 </div>
                 
                 <div class="form-group">

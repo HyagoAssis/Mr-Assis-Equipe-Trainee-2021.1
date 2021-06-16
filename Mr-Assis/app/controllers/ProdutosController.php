@@ -18,6 +18,16 @@ class ProdutosController {
         return view('adimin-produtos', $tables);
     }
 
+    public function produtos()
+    {
+        $produtos = App::get('database')->selectAll('produtos');
+        $tables = [
+            'produtos'=>$produtos,
+        ];
+
+        return view('produtos', $tables);
+    }
+
     protected static $arquivosCss = [
         'categorias.css'=>'../../public/css/categorias.css',
         'styles-admin-produto.css'=>'../../public/css/styles-admin-produto.css',
@@ -59,15 +69,13 @@ class ProdutosController {
     
     public function create()
     {
-
-        $parameters = [
-            'nome' => $_POST['nome'],
-            'preco' => $_POST['preco'],
-            'categoria' => $_POST['categoria'],
-            'descricao' => $_POST['descricao'],
-            'imagem'=> $_POST['imagem']
-        ];
-
+       
+        foreach($_POST as $postKey => $postValor)
+        {
+            $parameters["$postKey"] = $postValor;
+            
+        }
+        // $parameters = $_POST; ACHO QUE ISSO FUNCIONA, POREM PODE SER UMA MA PRATICA
         App::get('database')->insereProdutos('produtos', $parameters);
 
         header('Location: /admin/produtos');
@@ -82,18 +90,16 @@ class ProdutosController {
 
     public function edit()
     {
-        $parameters = [
-            'id'=> $_POST['id'],
-            'nome' => $_POST['nome'],
-            'preco' => $_POST['preco'],
-            'categoria' => $_POST['categoria'],
-            'descricao' => $_POST['descricao'],
-            'imagem'=> $_POST['imagem']
-        ];
+        foreach($_POST as $postKey => $postValor)
+        {
+            $parameters["$postKey"] = $postValor;
+            
+        }
 
         App::get('database')->edit('produtos', $parameters);
 
         header('Location: /admin/produtos');
     }
 
+    
 }

@@ -39,7 +39,7 @@ class QueryBuilder
             implode(', ', array_keys($parametros)),
             ':'. implode(', :', array_keys($parametros))
         );
-
+        
         try {
             $stmt = $this->pdo->prepare($sql);
 
@@ -66,19 +66,24 @@ class QueryBuilder
 
     public function edit($tabela , $parametros)
     {
-        $sql = "UPDATE `{$tabela}` SET 
-        `nome` = '{$parametros['nome']}', 
-        `preco` = '{$parametros['preco']}',
-        `categoria` = '{$parametros['categoria']}', 
-        `descricao` = '{$parametros['descricao']}', 
-        `imagem` = '{$parametros['imagem']}'
-        WHERE `{$tabela}`.`id` = {$parametros['id']}";
+        $sql = "UPDATE `{$tabela}` SET ";
         
-        //Tentar fazer um for
+        //Adicionando os parametros
+        foreach($parametros as $chave => $parametro)
+        {
+            $sql = $sql . "`{$chave}` = '{$parametro}', ";
+        }
+        
+        //Tirando a ultima virgula
+        $sql = rtrim($sql, " " . ",");
+        
+        //Adicionando o id
+        $sql = $sql . " WHERE `id` = {$parametros['id']}";
+        
 
         try {
             $stmt = $this->pdo->prepare($sql);
-            $stmt->execute($parametros);
+            $stmt->execute();
             
         } catch (Exception $e) {
             die($e->getMessage());

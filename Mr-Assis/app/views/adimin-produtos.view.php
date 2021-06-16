@@ -52,13 +52,17 @@
               <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Nome Produto" required>
             </div>
             <div class="row">
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
                 <label for="exampleFormControlInput2">Preço</label>
                 <input type="text" name="preco" class="form-control" id="exampleFormControlInput2" placeholder="00.00" required>
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-md-4">
                 <label for="exampleFormControlInput3">Categoria</label>
                 <input type="text" name="categoria" class="form-control" id="exampleFormControlInput3" placeholder="Nome Categoria" required>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="input-quantidade">Quantidade</label>
+                <input type="number" name="quantidade" class="form-control" id="input-quantidade" placeholder="Quantidade de produtos" required>
               </div>
             </div>
           <div class="form-group">
@@ -90,36 +94,5 @@
       feather.replace()
     </script>
 
-    <!-- Graphs -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
-    <script>
-      var ctx = document.getElementById("myChart");
-      var myChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          datasets: [{
-            data: [15339, 21345, 18483, 24003, 23489, 24092, 12034],
-            lineTension: 0,
-            backgroundColor: 'transparent',
-            borderColor: '#007bff',
-            borderWidth: 4,
-            pointBackgroundColor: '#007bff'
-          }]
-        },
-        options: {
-          scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: false
-              }
-            }]
-          },
-          legend: {
-            display: false,
-          }
-        }
-      });
-    </script>
   </body>
 </html>
