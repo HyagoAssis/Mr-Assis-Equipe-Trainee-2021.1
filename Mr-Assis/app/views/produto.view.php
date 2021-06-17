@@ -20,8 +20,8 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/410c009f17.js" crossorigin="anonymous"></script>
 
-    <?php foreach($produto as $elemento): ?>
-    <title>Mr. Assis - <?= $elemento->nome ?> </title>
+    
+    <title>Mr. Assis - <?= $produto[0]->nome ?> </title>
 </head>
 <body>
           
@@ -29,7 +29,7 @@
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb caminho">
               <li class="breadcrumb-item "><a href="/produtos" class="text-white">Produtos</a></li>
-              <li class="breadcrumb-item active text-white-50" aria-current="page"> <?= $elemento->nome ?> </li>
+              <li class="breadcrumb-item active text-white-50" aria-current="page"> <?= $produto[0]->nome ?> </li>
           </ol>
       </nav>
     </div>
@@ -37,18 +37,18 @@
     <div class="container conteudo pt-3 pb-3">
         <div class="row mb-5 ">
             <div class="col-md-4">
-                    <img class="img-produto" src="../../public/img/<?= $elemento->imagem ?>" alt="Foto <?= $elemento->nome ?>">
+                    <img class="img-produto" src="../../public/img/<?= $produto[0]->imagem ?>" alt="Foto <?= $produto[0]->nome ?>">
             </div>
             <div class="col-md-8 pl-4 pr-4">
                 <div class="row mb-4 ">
-                    <h1><?= $elemento->nome ?></h1>
+                    <h1><?= $produto[0]->nome ?></h1>
                 </div>
                 <div class="row d-flex justify-content-between">
                     <div class="col-sm-6 mb-3 pl-0">
-                        <h2>R$ <?= $elemento->preco ?></h2>
+                        <h2>R$ <?= $produto[0]->preco ?></h2>
                     </div>
                     <div class="col-sm-6 mb-3 pl-0">
-                        <h2><i class="fas fa-box-open"></i> <?= $elemento->quantidade ?></h2>
+                        <h2><i class="fas fa-box-open"></i> <?= $produto[0]->quantidade ?></h2>
                     </div>
                     
                 </div>
@@ -69,7 +69,7 @@
                 
                       <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                          <?= $elemento->descricao ?>
+                          <?= $produto[0]->descricao ?>
                         </div>
                       </div>
                     </div>
@@ -85,7 +85,7 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                           <div class="card-body">
                             <div class="xadrez">
-                              <p><?= $elemento->categoria ?></p>
+                              <p><?= $produto[0]->categoria ?></p>
                             </div>
                           </div>
                         </div>
@@ -94,7 +94,6 @@
                 </div>
             </div>
         </div>
-        <?php endforeach; ?>
     </div>
 
 
