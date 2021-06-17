@@ -20,6 +20,8 @@
                 </tr>
               </thead>
               <tbody>
+              <?php if( !empty($produtos) ): ?>
+
                 <?php foreach ($produtos as $produto) :?>
 
                   <!-- modal delete -->
@@ -41,8 +43,15 @@
                 </tr>
                 <?php endforeach; ?>
 
+
+
               </tbody>
             </table>
+                <?php else: ?>
+                  <div class="container d-flex justify-content-center mt-5 mb-5">
+                      <p>Nenhum Produto encontrado :(</p>
+                  </div>
+                <?php endif; ?>
           </div>
 
           <h2>Criar Produto</h2>

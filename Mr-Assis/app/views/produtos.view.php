@@ -57,8 +57,9 @@
 
         </div>
         <div class=" row d-flex justify-content-center produtos">
-
+                
                         <!-- Cards -->
+                <?php if( !empty($produtos) ): ?>
                         <?php foreach ($produtos as $produto) : ?>
                             <div class="card m-4" style="width: 18rem;">
                                 <form action="/produto" method="GET">
@@ -90,7 +91,11 @@
                                 </div>
                             </div>
                         <?php endforeach; ?>
-
+                <?php else: ?>
+                <div class="container d-flex justify-content-center mt-5 mb-5">
+                    <p>Nenhum Produto encontrado :(</p>
+                </div>
+                <?php endif; ?>
             </div>
 
 
