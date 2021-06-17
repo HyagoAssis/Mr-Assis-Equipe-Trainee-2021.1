@@ -20,6 +20,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/410c009f17.js" crossorigin="anonymous"></script>
 
+    <?php if(!empty($produto)): ?>
     
     <title>Mr. Assis - <?= $produto[0]->nome ?> </title>
 </head>
@@ -96,6 +97,15 @@
         </div>
     </div>
 
+
+      <?php else: ?>
+        <title>Mr. Assis - Produto não Encontrado </title>
+        </head>
+        <body>
+            <div class="container d-flex justify-content-center mt-5 mb-5">
+                <p>Nenhum Produto encontrado :(</p>
+            </div>
+      <?php endif; ?>
 
 
     
