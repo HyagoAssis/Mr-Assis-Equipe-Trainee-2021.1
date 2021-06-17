@@ -15,26 +15,26 @@
 
                 <div class="form-group">
                   <label for="nome-produto-input">Nome Produto</label>
-                  <input class="form-control" id="nome-produto-input" name="nome" placeholder="<?= $produto->nome ?>" required>
+                  <input class="form-control" id="nome-produto-input" name="nome" value="<?= $produto->nome ?>" required>
                 </div>
 
                 <div class="form-group">
                     <label for="preco-produto-input">Preço</label>
-                    <input class="form-control" id="preco-produto-input" name="preco" placeholder="<?= $produto->preco ?>" required>
+                    <input class="form-control" id="preco-produto-input" name="preco" value="<?= $produto->preco ?>" required>
                 </div>
 
                 <div class="form-group">
                   <label for="categoria-produto-input">Categoria</label>
-                  <input type="text" name="categoria" class="form-control" name="categoria" id="categoria-produto-input" placeholder="<?= $produto->categoria ?>" required>
+                  <input type="text" name="categoria" class="form-control" name="categoria" id="categoria-produto-input" value="<?= $produto->categoria ?>" required>
                 </div>
 
                 <div class="form-group">
                   <label for="input-quantidade-edit">Quantidade</label>
-                  <input type="number" name="quantidade" class="form-control" id="input-quantidade-edit" placeholder="<?= $produto->quantidade ?>" required>
+                  <input type="number" name="quantidade" class="form-control" id="input-quantidade-edit" value="<?= $produto->quantidade ?>" required>
                 </div>
 
                 <div class="form-group">
-                  <label for="descricao-produto-input">Decrição</label>
+                  <label for="descricao-produto-input">Descrição</label>
                   <textarea class="form-control" id="descricao-produto-input" name="descricao" rows="3" placeholder="<?= $produto->descricao ?>" required></textarea>
                 </div>
                 

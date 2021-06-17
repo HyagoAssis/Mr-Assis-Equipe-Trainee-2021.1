@@ -17,6 +17,15 @@ class ProdutosController {
         ];
         return view('adimin-produtos', $tables);
     }
+    public function produtoView()
+    {
+        
+        $produto = App::get('database')->selectProduto('produtos', $_GET['id']);
+
+
+        return view("produto", compact('produto'));
+
+    }
 
     public function produtos()
     {
@@ -101,5 +110,4 @@ class ProdutosController {
         header('Location: /admin/produtos');
     }
 
-    
 }

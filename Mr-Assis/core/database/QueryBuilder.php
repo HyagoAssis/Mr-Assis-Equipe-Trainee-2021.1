@@ -90,4 +90,21 @@ class QueryBuilder
         }
         
     }
+
+    public function selectProduto($tabela, $id)
+    {
+        $sql = "SELECT * FROM $tabela WHERE id = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            // die(var_dump($stmt->fetch(PDO::FETCH_OBJ))); 
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
 }
