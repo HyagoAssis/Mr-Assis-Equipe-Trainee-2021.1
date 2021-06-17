@@ -19,7 +19,7 @@
             <div>
                 <label for="exampleInputEmail1">Endereço de email</label>
                 <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="<?= $usuario->email ?>" required>
-                <!-- <small id="emailHelp" class="form-text text-muted"></small> -->
+                <small id="emailHelp" class="form-text text-muted"></small> 
            </div>
 
           <div class="form-group">

@@ -33,8 +33,8 @@ class QueryBuilder
 
     public function insert ($table, $parametros)
     {
-        $sql = "INSERT INTO `{$table}` ('nome','e-mail','senha','foto') values ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}','{$parametros['foto']}')";
-
+        $sql= "INSERT INTO `usuarios`(`nome`, `email`, `senha`, `foto`) VALUES ('{$parametros['nome']}','{$parametros['email']}','{$parametros['senha']}','{$parametros['foto']}')";
+        
         try {
             $stmt = $this->pdo->prepare($sql);
 

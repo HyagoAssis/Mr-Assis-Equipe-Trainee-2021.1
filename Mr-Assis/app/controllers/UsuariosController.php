@@ -15,7 +15,7 @@ class UsuariosController{
 
     public function create()
     {
-        $parameters = [
+        $parametros = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha'],
@@ -34,16 +34,5 @@ class UsuariosController{
 
         header('Location: /');
     }
-    public function edit()
-    {
-        foreach($_POST as $postKey => $postValor)
-        {
-            $parameters["$postKey"] = $postValor;
-            
-        }
-
-        App::get('database')->edit('usuarios', $parameters);
-
-        header('Location: /');
-    }
+    
 }

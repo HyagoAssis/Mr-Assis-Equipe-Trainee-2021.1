@@ -72,7 +72,7 @@
             <table class="table table-striped table-sm">
               <thead>
                 <tr>
-                  <th>Número</th>
+                  <th>ID</th>
                   <th class = "tabela-usuario">Nome</th>
                   <th>Visualizar </th>
                   <th>Editar</th>
@@ -81,17 +81,58 @@
               </thead>
             <tbody>
               <?php foreach ($usuarios as $usuario) : ?>
-                
+                                    <!-- Modal -->
+                    <div class="modal fade bd-example-modal-lg" id="dadosusuario<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class = "container">
+                                  <h1>Dados do Usuário</h1>
+                              <form>
+                                  <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Nome</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $usuario->nome ?>" >
+                                    </div>
+                                  </div>
+                                  <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $usuario->email ?>" >
+                                    </div>
+                                  </div>
+                                  <div class="form-group row" >
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Senha</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $usuario->senha ?>">
+                                    </div>
+                                  </div>
+                                  <div class="form-group row" src="../../public/img/<?= $usuario->foto ?>" alt="Foto" value="<?= $usuario->foto ?>">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Foto</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $usuario->foto ?>">
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                                  </div>
+                              </form>
+                            </div>
+                        </div>
+                      </div>
+                    </div>  
+
+    
+
                 <?php require 'modaldelete.php' ?>
                 <?php require 'modaledit.php' ?>
-                <?php require 'modaldadosusuario.php' ?>
+               
 
                 <tr>
                     <td><?= $usuario->id ?></td>
                     <td class="tabela-usuario"><?= $usuario->nome ?></td>
-                    <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" <?= $usuario->id ?> src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></input></td>
-                    <td><input type="image"  data-toggle="modal" data-target="#modaledit <?= $usuario->id ?>" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                    <td><input type="image" data-toggle="modal" data-target=".modal-delete" <?= $usuario->id ?> src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input> </td>
+                    <td><input type="image"  data-toggle="modal" data-target="#dadosusuario<?= $usuario->id ?>" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></input></td>
+                    <td><input type="image"  data-toggle="modal" data-target="#modaledit<?= $usuario->id ?>" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
+                    <td><input type="image" data-toggle="modal" data-target="#delete<?= $usuario->id ?>" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input> </td>
                 </tr>
                <?php endforeach; ?>
               </tbody>
@@ -99,7 +140,7 @@
           </div>
 
           <h2>Criar Usuário</h2>
-          <form action="usuarios/create" method="POST">
+          <form action="/usuarios/create" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
@@ -116,12 +157,12 @@
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Foto</label>
-              <form>
+              
                 <div class="form-group">
                   <label for="exampleFormControlFile1">Adicione a foto do usuário</label>
                   <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1">
                 </div>
-              </form>
+              
             </div>
             <button type="submit" class="btn btn-primary">Cadastrar</button>
           </form>
