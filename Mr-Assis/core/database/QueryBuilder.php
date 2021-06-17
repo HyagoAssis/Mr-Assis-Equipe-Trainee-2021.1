@@ -33,7 +33,7 @@ class QueryBuilder
 
     public function insert ($table, $parametros)
     {
-        $sql = "insert into `{$table}` ('nome','e-mail','senha','foto','id') values ('{$parametros}')";
+        $sql = "INSERT INTO `{$table}` ('nome','e-mail','senha','foto') values ('{$parametros['nome']}', '{$parametros['email']}', '{$parametros['senha']}','{$parametros['foto']}')";
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -45,14 +45,30 @@ class QueryBuilder
         }
 
     }
-    public function delete($table, $idp)
+    public function delete($table, $id)
     {
-        $sql = "delete from {$table} where id = {$idp}";
+        $sql = "delete from {$table} where id = {$id}";
 
         try {
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    
+    }
+
+    public function edit ($table, $parametros)
+    {
+        
+        $sql = "UPDATE `{$table}` SET `nome`='{$parametros[nome]}',`email`='{$parametros[email]}',`senha`='{$parametros[senha]}',`foto`='{$parametros[foto]}' ,`id`='{$parametros[id]}' ";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+            
         } catch (Exception $e) {
             die($e->getMessage());
         }

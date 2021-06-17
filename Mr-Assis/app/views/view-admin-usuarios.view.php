@@ -15,125 +15,8 @@
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
   </head>
-
-  <body>
-     <!-- Modals delete -->
-
-     <div class="modal fade modal-delete" id="modalConfirmDelete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-sm modal-notify modal-danger" role="document">
-          <!--Content-->
-          <div class="modal-content text-center">
-              <!--Header-->
-              <div class="modal-header d-flex justify-content-center">
-                  <p class="heading">Tem certeza?</p>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-              </div>
-
-              <!--Body-->
-              <div class="modal-body">
-
-                  <img src="https://img.icons8.com/offices/30/000000/delete-sign.png">
-
-              </div>
-
-              <!--Footer-->
-              <div class="modal-footer flex-center">
-                  <a href="" class="btn  btn-outline-danger">Sim</a>
-                  <a type="button" class="btn  btn-danger waves-effect" data-dismiss="modal">Não</a>
-              </div>
-          </div>
-          <!--/.Content-->
-      </div>
-  </div>
+ <body>
     
-<!-- Modal -->
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class = "container">
-          <h1>Dados do Usuário</h1>
-          <form>
-            <div class="form-group row">
-              <label for="staticEmail" class="col-sm-2 col-form-label">Nome</label>
-              <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Gabriela">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-              <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@exemplo.com">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="staticEmail" class="col-sm-2 col-form-label">Senha</label>
-              <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="123">
-              </div>
-            </div>
-            <div class="form-group row">
-              <label for="staticEmail" class="col-sm-2 col-form-label">Foto</label>
-              <div class="col-sm-10">
-                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="">
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            </div>
-          </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <div class="form-group">
-              <label for="exampleInputPassword1">Nome</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-            </div> 
-            <label for="exampleInputEmail1">Endereço de email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-            <small id="emailHelp" class="form-text text-muted"></small>
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Senha</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-          </div> 
-          <div class="form-group">
-            <label for="exampleInputPassword1">Foto</label>
-            <form>
-              <div class="form-group">
-                <label for="exampleFormControlFile1">Adicione a foto do usuário</label>
-                <input type="file" class="form-control-file" id="exampleFormControlFile1">
-              </div>
-            </form>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Salvar mudanças</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow position-static">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
             <img src="img/Mr. Assis.png" alt="Logo Mr. Assis" class="img-fluid ">
@@ -190,67 +73,53 @@
               <thead>
                 <tr>
                   <th>Número</th>
-                  <th>Nome</th>
+                  <th class = "tabela-usuario">Nome</th>
                   <th>Visualizar </th>
-                  <th>Editar </th>
-                  <th>Deletar </th>
-                  
+                  <th>Editar</th>
+                  <th>Deletar</th>
                 </tr>
               </thead>
-              <tbody>
+            <tbody>
+              <?php foreach ($usuarios as $usuario) : ?>
+                
+                <?php require 'modaldelete.php' ?>
+                <?php require 'modaledit.php' ?>
+                <?php require 'modaldadosusuario.php' ?>
+
                 <tr>
-                  <td>1</td>
-                  <td>Arthur</td>
-                  <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
-                  <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
+                    <td><?= $usuario->id ?></td>
+                    <td class="tabela-usuario"><?= $usuario->nome ?></td>
+                    <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" <?= $usuario->id ?> src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></input></td>
+                    <td><input type="image"  data-toggle="modal" data-target="#modaledit <?= $usuario->id ?>" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
+                    <td><input type="image" data-toggle="modal" data-target=".modal-delete" <?= $usuario->id ?> src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input> </td>
                 </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Gabriela</td>
-                  <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
-                  <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Pedro</td>
-                  <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
-                  <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Thiago</td>
-                  <td><input type="image"  data-toggle="modal" data-target=".bd-example-modal-lg" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></button></td>
-                  <td><input type="image"  data-toggle="modal" data-target="#modalExemplo" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
-                  <td><input type = "image" data-toggle="modal" data-target=".modal-delete" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>
-                </tr>
+               <?php endforeach; ?>
               </tbody>
             </table>
           </div>
+
           <h2>Criar Usuário</h2>
-          <form>
+          <form action="usuarios/create" method="POST">
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="inputEmail4">Email</label>
-                <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                <input type="tex" name="email" class="form-control" id="inputEmail4" placeholder="e-mail" required>
               </div>
               <div class="form-group col-md-6">
                 <label for="inputPassword4">Senha</label>
-                <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+                <input type="password" name="senha" class="form-control" id="inputPassword4" placeholder="Senha" required>
               </div>
             </div>
             <div class="form-group">
               <label for="inputAddress">Nome</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="Nome Completo">
+              <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Nome Completo" required>
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Foto</label>
               <form>
                 <div class="form-group">
                   <label for="exampleFormControlFile1">Adicione a foto do usuário</label>
-                  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  <input type="file" name="foto" class="form-control-file" id="exampleFormControlFile1">
                 </div>
               </form>
             </div>
@@ -258,8 +127,6 @@
           </form>
         </main>
       </div>
-
-      
     </div>
 
     <!-- Bootstrap core JavaScript

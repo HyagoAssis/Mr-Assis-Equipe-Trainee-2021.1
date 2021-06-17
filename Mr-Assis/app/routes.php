@@ -3,8 +3,10 @@
 
 $router->get('','UsuariosController@index');
 
-$router->post('usuários/create', 'UsuariosController@create');
+$router->post('usuarios/create', 'UsuariosController@create');
 
-$router->post('usuários/delete', 'UsuariosController@delete');
+$router->post('usuarios/delete', 'UsuariosController@delete');
+
+$router->post('usuarios/edit', 'UsuariosController@edit');
 
 ?>

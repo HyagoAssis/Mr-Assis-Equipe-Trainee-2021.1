@@ -11,7 +11,7 @@ class ComposerStaticInite9642032c4858df052ef47d6a0e3c9dc
     );
 
     public static $classMap = array (
-        'App\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/controllers/PagesController.php',
+        'App\\Controllers\\UsuariosController' => __DIR__ . '/../..' . '/app/controllers/UsuariosController.php',
         'App\\Core\\App' => __DIR__ . '/../..' . '/core/App.php',
         'App\\Core\\Database\\Connection' => __DIR__ . '/../..' . '/core/database/Connection.php',
         'App\\Core\\Database\\QueryBuilder' => __DIR__ . '/../..' . '/core/database/QueryBuilder.php',
@@ -21,7 +21,6 @@ class ComposerStaticInite9642032c4858df052ef47d6a0e3c9dc
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInite9642032c4858df052ef47d6a0e3c9dc' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'UsuariosController' => __DIR__ . '/../..' . '/app/controllers/UsuariosController.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
