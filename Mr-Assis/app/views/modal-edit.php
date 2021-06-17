@@ -35,12 +35,12 @@
 
                 <div class="form-group">
                   <label for="descricao-produto-input">Descrição</label>
-                  <textarea class="form-control" id="descricao-produto-input" name="descricao" rows="3" placeholder="<?= $produto->descricao ?>" required></textarea>
+                  <textarea class="form-control" id="descricao-produto-input" name="descricao" rows="3" placeholder="<?= $produto->descricao ?>" ></textarea>
                 </div>
                 
                 <div class="form-group">
                   <label for="imagem-produto-input">Adicione uma foto do Produto</label>
-                  <input type="file" class="form-control-file" name="imagem" id="imagem-produto-input" required>
+                  <input type="file" class="form-control-file" name="imagem" id="imagem-produto-input" >
                 </div>
 
                 <input type="hidden" name="id" value="<?= $produto->id ?>">

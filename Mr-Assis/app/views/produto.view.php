@@ -102,6 +102,7 @@
         <title>Mr. Assis - Produto não Encontrado </title>
         </head>
         <body>
+        <!-- Adicionar o navbar e o footer aqui dps -->
             <div class="container d-flex justify-content-center mt-5 mb-5">
                 <p>Nenhum Produto encontrado :(</p>
             </div>

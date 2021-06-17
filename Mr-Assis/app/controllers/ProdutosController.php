@@ -101,7 +101,10 @@ class ProdutosController {
     {
         foreach($_POST as $postKey => $postValor)
         {
-            $parameters["$postKey"] = $postValor;
+            if( !($postValor == '') )
+            {
+                $parameters["$postKey"] = $postValor;
+            }
             
         }
 
