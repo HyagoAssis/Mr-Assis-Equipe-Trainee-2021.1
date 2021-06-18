@@ -4,19 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+    <?php require 'links-navbar.php' ?>
     <!-- CSS -->
     <link rel="stylesheet" href="../../public/css/styles-view-um-produto.css">
-
-    <!-- Fonte -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/410c009f17.js" crossorigin="anonymous"></script>
 
@@ -25,15 +15,13 @@
     <title>Mr. Assis - <?= $produto[0]->nome ?> </title>
 </head>
 <body>
-          
-    <div class="container">
+    <?php require 'navbar.view.php' ?>      
       <nav aria-label="breadcrumb">
           <ol class="breadcrumb caminho">
               <li class="breadcrumb-item "><a href="/produtos" class="text-white">Produtos</a></li>
               <li class="breadcrumb-item active text-white-50" aria-current="page"> <?= $produto[0]->nome ?> </li>
           </ol>
       </nav>
-    </div>
 
     <div class="container conteudo pt-3 pb-3">
         <div class="row mb-5 ">
@@ -98,6 +86,7 @@
     </div>
 
 
+    <?php require 'footer.php' ?>
       <?php else: ?>
         <title>Mr. Assis - Produto não Encontrado </title>
         </head>
@@ -107,7 +96,6 @@
                 <p>Nenhum Produto encontrado :(</p>
             </div>
       <?php endif; ?>
-
 
     
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

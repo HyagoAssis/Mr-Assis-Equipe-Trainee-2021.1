@@ -131,7 +131,7 @@
         </div>
 
 
-
+        <?php require 'footer.php' ?>
 
 
         <!-- Bootstrap -->
