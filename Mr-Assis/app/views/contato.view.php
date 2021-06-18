@@ -18,11 +18,16 @@
           <link rel="stylesheet" href="css/mdb.min.css" />
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/stylescontato.css">
+
+        <?php require 'links-navbar.php' ?>
+
+        <link rel="stylesheet" href="../../public/css/stylescontato.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           
       </head>
 <body>
+    <?php require 'navbar.view.php' ?>
+    
     <div class = "container">
         <form class = "formulario">
           <div class="form-row">
@@ -60,6 +65,8 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.5743164749247!2d-43.35785178558967!3d-21.758022703356612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b64bb93da7b%3A0xba4e334b893fbe6!2sAv.%20Oleg%C3%A1rio%20Maciel%20-%20Santa%20Helena%2C%20Juiz%20de%20Fora%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1621451903757!5m2!1spt-BR!2sbr" width="950" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
+
+    <?php require 'footer.php' ?>
     
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

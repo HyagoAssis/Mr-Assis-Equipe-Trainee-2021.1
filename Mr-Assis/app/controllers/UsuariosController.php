@@ -12,6 +12,15 @@ class UsuariosController{
     
         return view('view-admin-usuarios', compact('usuarios'));
     }
+    public function admUsuarios()
+    {
+        $usuarios = App::get('database')->selectAll('usuarios');
+        
+        $tables = [
+            'usuarios' => $usuarios
+        ];
+        return view('view-admin-usuarios', $tables);
+    }
 
     public function create()
     {
@@ -25,29 +34,15 @@ class UsuariosController{
 
         App::get('database')->insert('usuarios', $parametros);
 
-        header('Location: /');
+        header('Location: /admin/usuarios');
     }
     public function delete()
     {
         
         App::get('database')->delete('usuarios', $_POST['id']);
 
-        header('Location: /');
+        header('Location: /admin/usuarios');
     }
-    // public function edit()
-    // {
-    //     $parametros = [
-    //             'nome' => $_POST['nome'],
-    //             'email' => $_POST['email'],
-    //             'senha' => $_POST['senha'],
-    //             'foto' => $_POST['foto']
-                    
-    //      ];
-
-    //     App::get('database')->edit('usuarios', $parametros);
-
-    //     header('Location: /');
-    // }
    
     public function edit()
     {
@@ -62,6 +57,6 @@ class UsuariosController{
 
         App::get('database')->edit('usuarios', $parameters);
 
-        header('Location: /');
+        header('Location: /admin/usuarios');
     }
 }
