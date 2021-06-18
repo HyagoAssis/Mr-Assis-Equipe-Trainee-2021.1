@@ -9,7 +9,6 @@ class PagesController {
     {   
         return view('index');
     }
-
     
         
 }

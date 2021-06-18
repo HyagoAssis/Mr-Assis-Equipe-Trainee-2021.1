@@ -18,12 +18,14 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/410c009f17.js" crossorigin="anonymous"></script>
+    <?php require 'links-navbar.php' ?>
 
     <title>Produtos - Mr. Assis</title>
 </head>
 
 <body>
 
+    <?php require 'navbar.view.php' ?>
 
     <div class="container mt-2 ">
         <div class="row ">
