@@ -13,16 +13,28 @@
           </div>
 
 
-            <img class="modal-img" src="../../public/img/<?= $produto->imagem ?>" alt="Foto <?= $produto->nome ?>">
-            <h2 class="modal-titulo"><?= $produto->nome ?></h2>
-            <h3>Quantidade</h3>
-            <p><?= $produto->quantidade ?></p>
-            <h3>Descrição</h3>
-            <p><?= $produto->descricao ?></p>
-            <h3>Preço</h3>
-            <p>R$: <?= $produto->preco ?></p>
-            <h3>Categoria</h3>
-            <p><?= $produto->categoria ?></p>
+            <img class="modal-img" src="../../public/img/<?= $produto->imagem ?>" id="foto-view" alt="Foto <?= $produto->nome ?>">
+            <div class="row">
+              <div class="col-md-12">
+                <h2 class="modal-titulo"><?= $produto->nome ?></h2>
+              </div>
+              <div class="col-md-6">
+                <h4>Quantidade</h3>
+                <p><?= $produto->quantidade ?></p>
+              </div>
+              <div class="col-md-6">
+                <h4>Categoria</h3>
+                <p><?= $produto->categoria ?></p>
+              </div>
+              <div class="col-md-6">
+                <h4>Preço</h3>
+                <p>R$: <?= $produto->preco ?></p>
+              </div>
+              <div class="col-md-12">
+                <h4>Descrição</h3>
+                <p><?= $produto->descricao ?></p>
+              </div>
+            </div>
 
 
           </div>

@@ -1,8 +1,9 @@
 body {
     font-size: .875rem;
   }
-.modal-img{
-  width: 100px !important;
+#foto-view{
+  width: 300px !important;
+  margin: auto;
 }
   .feather {
     width: 16px;

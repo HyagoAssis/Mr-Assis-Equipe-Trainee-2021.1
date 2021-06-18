@@ -66,18 +66,22 @@
                 <input type="text" name="preco" class="form-control" id="exampleFormControlInput2" placeholder="00.00" required>
               </div>
               <div class="form-group col-md-4">
-                <label for="exampleFormControlInput3">Categoria</label>
-                <input type="text" name="categoria" class="form-control" id="exampleFormControlInput3" placeholder="Nome Categoria" required>
+                <label for="input-categoria">Categoria</label>
+                <select class="form-control" name="categoria" id="input-categoria"  required>
+                  <?php foreach($categorias as $categoria): ?>
+                    <option> <?= $categoria->nome ?> </option>
+                  <?php endforeach; ?>
+                </select>
               </div>
               <div class="form-group col-md-4">
                 <label for="input-quantidade">Quantidade</label>
                 <input type="number" name="quantidade" class="form-control" id="input-quantidade" placeholder="Quantidade de produtos" required>
               </div>
             </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Decrição</label>
-            <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="3" required></textarea>
-          </div>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Decrição</label>
+              <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="3" required></textarea>
+            </div>
             <div class="form-group">
               <label for="exampleFormControlFile1">Foto</label>
               <input type="file" name="imagem"class="form-control-file" id="exampleFormControlFile1" required>

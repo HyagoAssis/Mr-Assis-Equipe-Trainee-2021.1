@@ -2,10 +2,6 @@
 
 use App\Controllers\ProdutosController;
 
-//Procurando o css
-$css = ProdutosController::css("stylesadministrativa.css");
-$js = ProdutosController::js("js/script.js");
-
 ?>
 <!doctype html>
 <html lang="pt-br">
@@ -30,11 +26,10 @@ $js = ProdutosController::js("js/script.js");
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="<?= $css ?>" media="screen" />
-    
+    <link rel="stylesheet" type="text/css" href="../../public/css/stylesadministrativa.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../public/css/styles-admin-produto.css" media="screen">  
     <!-- Javascript -->
-    <!-- <script type="text/javascript" src="js/scripts.js?version=0.0.1"></script>  -->
-    <script type="text/javascript" src="<?= $js ?>"></script>
+    <script type="text/javascript" src="../../public/js/scripts.js"></script> 
 
   </head>
 

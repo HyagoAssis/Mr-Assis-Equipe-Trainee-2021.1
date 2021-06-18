@@ -25,7 +25,6 @@
 <body>
 
 
-
     <div class="container mt-2 ">
         <div class="row ">
 
@@ -38,8 +37,8 @@
                         Categorias
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <?php foreach ($produtos as $produto) : ?>
-                            <a class="dropdown-item" href="#"><?= $produto->categoria ?></a>
+                        <?php foreach ($categorias as $categoria) : ?>
+                            <a class="dropdown-item" href="#"><?= $categoria->nome ?></a>
                         <?php endforeach; ?>
                     </div>
                 </div>

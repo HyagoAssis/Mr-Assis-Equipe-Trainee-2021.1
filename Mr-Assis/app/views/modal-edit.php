@@ -24,9 +24,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="categoria-produto-input">Categoria</label>
-                  <input type="text" name="categoria" class="form-control" name="categoria" id="categoria-produto-input" value="<?= $produto->categoria ?>" required>
-                </div>
+                <label for="edit-categoria">Categoria</label>
+                <select class="form-control" name="categoria" id="edit-categoria" required>
+                  <?php foreach($categorias as $categoria): ?>
+                    <option> <?= $categoria->nome ?> </option>
+                  <?php endforeach; ?>
+                </select>
+              </div>
 
                 <div class="form-group">
                   <label for="input-quantidade-edit">Quantidade</label>
