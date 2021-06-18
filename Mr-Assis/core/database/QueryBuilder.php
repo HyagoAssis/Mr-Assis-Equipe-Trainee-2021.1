@@ -60,19 +60,44 @@ class QueryBuilder
     
     }
 
-    public function edit ($table, $parametros)
-    {
+    // public function edit ($table, $parametros)
+    // {
         
-        $sql = "UPDATE `{$table}` SET `nome`='{$parametros[nome]}',`email`='{$parametros[email]}',`senha`='{$parametros[senha]}',`foto`='{$parametros[foto]}' ,`id`='{$parametros[id]}' ";
+    //     $sql = "UPDATE `{$table}` SET `nome`='{$parametros['nome']}',`email`='{$parametros['email']}',`senha`='{$parametros['senha']}',`foto`='{$parametros['foto']}' WHERE '{$table}' . 'id' = '{$parametros['id']}' ";
+    //     try {
+    //         $stmt = $this->pdo->prepare($sql);
+
+    //         $stmt->execute();
+            
+    //      } catch (Exception $e) {
+    //          die($e->getMessage());
+    //      }
+
+    // }
+    public function edit($usuarios , $parametros)
+    {
+        $sql = "UPDATE `{$usuarios}` SET ";
+        
+        //Adicionando os parametros
+        foreach($parametros as $chave => $parametro)
+        {
+            $sql = $sql . "`{$chave}` = '{$parametro}', ";
+        }
+        
+        //Tirando a ultima virgula
+        $sql = rtrim($sql, " " . ",");
+        
+        //Adicionando o id
+        $sql = $sql . " WHERE `id` = {$parametros['id']}";
+    
         try {
             $stmt = $this->pdo->prepare($sql);
-
             $stmt->execute();
             
         } catch (Exception $e) {
             die($e->getMessage());
         }
-
     }
-
+    
+    
 }

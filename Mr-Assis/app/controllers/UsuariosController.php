@@ -27,12 +27,41 @@ class UsuariosController{
 
         header('Location: /');
     }
-    public function delete ()
+    public function delete()
     {
         
         App::get('database')->delete('usuarios', $_POST['id']);
 
         header('Location: /');
     }
-    
+    // public function edit()
+    // {
+    //     $parametros = [
+    //             'nome' => $_POST['nome'],
+    //             'email' => $_POST['email'],
+    //             'senha' => $_POST['senha'],
+    //             'foto' => $_POST['foto']
+                    
+    //      ];
+
+    //     App::get('database')->edit('usuarios', $parametros);
+
+    //     header('Location: /');
+    // }
+   
+    public function edit()
+    {
+        foreach($_POST as $postKey => $postValor)
+        {
+            if( !($postValor == '') )
+            {
+                $parameters["$postKey"] = $postValor;
+            }
+            
+        }
+
+        App::get('database')->edit('usuarios', $parameters);
+
+        header('Location: /');
+    }
 }

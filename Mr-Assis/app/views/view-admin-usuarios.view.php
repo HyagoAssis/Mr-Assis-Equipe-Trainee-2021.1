@@ -81,7 +81,10 @@
               </thead>
             <tbody>
               <?php foreach ($usuarios as $usuario) : ?>
-                                    <!-- Modal -->
+
+                <?php require 'modaldelete.php' ?>
+
+              <!-- Modal view-->
                     <div class="modal fade bd-example-modal-lg" id="dadosusuario<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
@@ -120,18 +123,59 @@
                         </div>
                       </div>
                     </div>  
+                <!-- fim view -->
 
-    
+               <!-- Modal edit-->
+              <div class="modal fade " id="edit<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Editar Usuário</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
 
-                <?php require 'modaldelete.php' ?>
-                <?php require 'modaledit.php' ?>
-               
+                      <form action="/usuarios/edit" method="POST">
+                          <div class="form-group">
+                              <div class="form-group">
+                              <label for="exampleInputPassword1">Nome</label>
+                              <input type="nome" class="form-control" id="exampleInputPassword1" name="nome" id="nome" placeholder="<?= $usuario->nome ?>" required>
+                          </div> 
+                          <div>
+                              <label for="exampleInputEmail1">Endereço de email</label>
+                              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="<?= $usuario->email ?>" required>
+                              <small id="emailHelp" class="form-text text-muted"></small> 
+                        </div>
 
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Senha</label>
+                          <input type="password" class="form-control" name="senha" id="senha" placeholder="<?= $usuario->senha ?>">
+                        </div> 
+                        
+                        <div class="form-group">
+                          <label for="foto-usuario-input">Adicione a foto do usuario</label>
+                          <input type="file" class="form-control-file" name="foto" id="foto" placeholder="<?= $usuario->foto ?>">
+                        </div>
+                          
+                      <input type="hidden" name="id" value="<?= $usuario->id ?>">
+                    
+                      <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                          <button type="submit" class="btn btn-primary">Salvar mudanças</button>
+                      </div>
+                  </form>
+                  </div>
+                </div>
+              </div>  
+              <!-- fim edit -->
+              
                 <tr>
                     <td><?= $usuario->id ?></td>
                     <td class="tabela-usuario"><?= $usuario->nome ?></td>
                     <td><input type="image"  data-toggle="modal" data-target="#dadosusuario<?= $usuario->id ?>" src="https://img.icons8.com/material-outlined/24/000000/data-configuration.png"></input></td>
-                    <td><input type="image"  data-toggle="modal" data-target="#modaledit<?= $usuario->id ?>" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
+                    <td><input type="image"  data-toggle="modal" data-target="#edit<?= $usuario->id ?>" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>
                     <td><input type="image" data-toggle="modal" data-target="#delete<?= $usuario->id ?>" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input> </td>
                 </tr>
                <?php endforeach; ?>
