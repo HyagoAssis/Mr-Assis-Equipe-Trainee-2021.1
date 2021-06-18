@@ -26,9 +26,13 @@
                 <div class="form-group">
                 <label for="edit-categoria">Categoria</label>
                 <select class="form-control" name="categoria" id="edit-categoria" required>
+                <?php if( !empty($categorias) ): ?>
                   <?php foreach($categorias as $categoria): ?>
                     <option> <?= $categoria->nome ?> </option>
                   <?php endforeach; ?>
+                <?php else: ?>
+                  <p> Nenhuma categoria foi encontrada </p>
+                <?php endif; ?>
                 </select>
               </div>
 

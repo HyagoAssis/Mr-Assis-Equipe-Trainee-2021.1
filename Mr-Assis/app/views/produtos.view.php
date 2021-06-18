@@ -37,9 +37,13 @@
                         Categorias
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <?php foreach ($categorias as $categoria) : ?>
-                            <a class="dropdown-item" href="#"><?= $categoria->nome ?></a>
-                        <?php endforeach; ?>
+                        <?php if( !empty($categorias) ): ?>
+                            <?php foreach ($categorias as $categoria) : ?>
+                                <a class="dropdown-item" href="#"><?= $categoria->nome ?></a>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p> Nenhuma categoria foi encontrada </p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

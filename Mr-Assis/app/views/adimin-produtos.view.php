@@ -68,9 +68,13 @@
               <div class="form-group col-md-4">
                 <label for="input-categoria">Categoria</label>
                 <select class="form-control" name="categoria" id="input-categoria"  required>
+                <?php if( !empty($categorias) ): ?>
                   <?php foreach($categorias as $categoria): ?>
                     <option> <?= $categoria->nome ?> </option>
-                  <?php endforeach; ?>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                  <p> Nenhuma categoria foi encontrada </p>
+                <?php endif; ?>
                 </select>
               </div>
               <div class="form-group col-md-4">
