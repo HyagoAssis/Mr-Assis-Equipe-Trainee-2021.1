@@ -7,9 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--LINK FONTE-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <? require 'links-navbar.php' ?>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <!--LINK CSS-->
-  <link rel="stylesheet" type="text/css" href="css/stylesquemsomos.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/stylesquemsomos.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -17,21 +18,9 @@
 </head>
 
 <body>
-
-  <!--LOGO MR ASSIS-->
-  <div class="logo">
-    <img src="../../public/img/Mr.Assis.png" class="img-fluid" alt="Imagem responsiva">
-  </div>
+  
   <!--NAV BAR-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página atual)</span></a>
-        <a class="nav-item nav-link" href="#">Produtos</a>
-        <a class="nav-item nav-link" href="#">Quem somos</a>
-      </div>
-    </div>
-  </nav>
+  <?php require 'navbar.view.php' ?>
   <!--Imagem da equipe do quem somos-->
   <div class="equipegeral">
   <div class="imgequipe">

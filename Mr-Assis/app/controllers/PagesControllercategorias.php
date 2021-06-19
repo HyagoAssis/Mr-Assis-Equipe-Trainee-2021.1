@@ -5,7 +5,8 @@ use App\Core\App;
 
 class PagesControllercategorias {
 
-    public function index ()
+
+    public function categorias ()
     {   
          
         $categorias = App::get('database') ->selectAll('categorias');
@@ -22,7 +23,24 @@ class PagesControllercategorias {
             ];
             App::get('database')->insert('categorias',$parametros);
 
-            header('Location: /inicio');
+            header('Location: /categorias');
+
+        }
+
+        public function delete(){
+
+            App::get('database')->delete('categorias',$_POST['id']);
+            header('Location: /categorias');
+        }
+        public function edit(){
+
+            $parametros = [
+                'name'=> $_POST['name'],
+                'id'=> $_POST['id']
+            ];
+            App::get('database')->edit('categorias',$parametros);
+
+            header('Location: /categorias');
 
         }
 }

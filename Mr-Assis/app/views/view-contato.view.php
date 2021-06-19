@@ -7,6 +7,7 @@
        
       <!-- links do site MDB -->
         <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
+        <?php require 'links-navbar.php' ?>
           <!-- Font Awesome -->
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" />
           <!-- Google Fonts Roboto -->
@@ -18,11 +19,12 @@
           <link rel="stylesheet" href="css/mdb.min.css" />
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/stylescontato.css">
+        <link rel="stylesheet" href="../../public/css/stylescontato.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           
       </head>
 <body>
+<?php require 'navbar.view.php' ?>
     <div class = "container">
         <form class = "formulario">
           <div class="form-row">

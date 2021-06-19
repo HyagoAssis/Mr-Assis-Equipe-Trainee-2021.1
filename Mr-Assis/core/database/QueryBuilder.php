@@ -29,4 +29,63 @@ class QueryBuilder
         }
 
     }
-}
+    public function insert($tables,$parametros){
+
+       $sql= "INSERT INTO `{$tables}`(`name`) VALUES ('{$parametros['name']}')";
+       
+       try{
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+
+    }catch (Exception $e) {
+        die($e->getMessage());
+    }
+
+    }
+
+    public function delete($table, $id)
+    {
+        $sql = "delete from {$table} where id = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+    public function edit($tabela , $parametros)
+    {
+        $sql = "UPDATE `{$tabela}` SET ";
+        
+        
+        foreach($parametros as $chave => $parametro)
+        {
+            $sql = $sql . "`{$chave}` = '{$parametro}', ";
+        }
+        
+        
+        $sql = rtrim($sql, " " . ",");
+        
+        
+        $sql = $sql . " WHERE `id` = {$parametros['id']}";
+        
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        
+    }
+
+            
+    
+    }
+    
+
+
