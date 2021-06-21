@@ -57,8 +57,8 @@
 
             <!-- Barra de Busca -->
             <div class="col-md-6 d-flex justify-content-center">
-                <form class="form-inline my-2 my-lg-0 justify-content-center">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                <form class="form-inline my-2 my-lg-0 justify-content-center" action="/produtos/busca" method="GET">
+                    <input class="form-control mr-sm-2" type="search" name="busca" placeholder="Pesquisar" aria-label="Pesquisar">
                     <button class="btn btn-outline-success my-2 my-sm-0 botao-busca" type="submit" ">Pesquisar</button>
                     </form>
                 </div>

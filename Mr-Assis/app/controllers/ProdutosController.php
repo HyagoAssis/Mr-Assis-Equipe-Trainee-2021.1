@@ -42,6 +42,21 @@ class ProdutosController {
         return view('produtos', $tables);
 
     }
+
+    public function busca()
+    {
+
+        $produtos = App::get('database')->selectBusca('produtos', $_GET['busca']);
+        $categorias = App::get('database')->selectAll('categorias');
+
+        $tables = [
+            'produtos'=>$produtos,
+            'categorias'=>$categorias,
+        ];
+
+        return view('produtos', $tables);
+
+    }
     public function produtos()
     {
         $produtos = App::get('database')->selectAll('produtos');

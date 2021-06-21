@@ -121,4 +121,19 @@ class QueryBuilder
         }
 
     }
+
+    public function selectBusca($tabela, $busca)
+    {
+        $busca = trim($busca);
+        $sql = "SELECT * FROM {$tabela} WHERE nome LIKE '%{$busca}%'";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
 }
