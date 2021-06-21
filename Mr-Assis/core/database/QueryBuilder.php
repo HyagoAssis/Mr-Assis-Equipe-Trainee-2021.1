@@ -31,6 +31,39 @@ class QueryBuilder
         }
     }
 
+    public function numLinhas($table)
+    {
+        $sql = "SELECT COUNT(*) FROM {$table}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchColumn();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+    }
+
+    public function paginacao($table, $pagina, $itensPorPagina)
+    {
+        $sql = "select * from {$table} LIMIT {$pagina}, {$itensPorPagina}";
+        // die(var_dump($sql));
+
+        try {
+            
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
+
     public function insereProdutos ($table, $parametros)
     {
         $sql = sprintf(

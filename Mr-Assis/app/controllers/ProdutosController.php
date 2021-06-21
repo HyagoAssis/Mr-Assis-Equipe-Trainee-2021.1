@@ -59,12 +59,44 @@ class ProdutosController {
     }
     public function produtos()
     {
-        $produtos = App::get('database')->selectAll('produtos');
+        //numero de itens por paginas
+        $itens_por_pagina = 10;
+
+        // pegar a pagina atual
+        if(array_key_exists('pagina', $_GET))
+        {
+            $pagina = intval($_GET['pagina']) - 1;
+        }
+        else{
+            $pagina = 0;
+        }
+
+        //Numero total de produtos
+        $num_produtos = App::get('database')->numLinhas('produtos');
+
+
+        $produtos_restantes =  $num_produtos - (($pagina)*$itens_por_pagina);
+
+        if( $produtos_restantes > $itens_por_pagina)
+        {
+            //puxar os produtos do banco    
+            $produtos = App::get('database')->paginacao('produtos', $pagina, $itens_por_pagina);
+        }else
+        {
+            //Caso o numero de produtos restantes for menor que itens por pagina ele mostrará so o numero de itens restantes
+            $produtos = App::get('database')->paginacao('produtos', $pagina, $produtos_restantes);
+        }
+            
+        
+        //Numero de paginas
+        $num_paginas = ceil($num_produtos/$itens_por_pagina);
+
         $categorias = App::get('database')->selectAll('categorias');
         
         $tables = [
             'produtos'=>$produtos,
             'categorias'=>$categorias,
+            'num_paginas'=>$num_paginas
         ];
 
         return view('produtos', $tables);

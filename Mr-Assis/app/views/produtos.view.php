@@ -114,16 +114,16 @@
             <nav aria-label="Navegação de página exemplo" class="d-flex justify-content-center">
                 <ul class="pagination">
                     <li class="page-item">
-                        <a class="page-link pag-ancora" href="#" aria-label="Anterior">
+                        <a class="page-link pag-ancora" href="/produtos?pagina=<?= $pagina-1 ?>" aria-label="Anterior">
                             <span aria-hidden="true">&laquo;</span>
                             <span class="sr-only">Anterior</span>
                         </a>
                     </li>
-                    <li class="page-item"><a class="page-link pag-ancora" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link pag-ancora" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link pag-ancora" href="#">3</a></li>
+                    <?php for($i=0; $i<$num_paginas; $i++): ?>
+                        <li class="page-item"><a class="page-link pag-ancora" href="/produtos?pagina=<?= $i+1 ?>"><?= $i+1 ?></a></li>
+                    <?php endfor; ?>
                     <li class="page-item">
-                        <a class="page-link pag-ancora" href="#" aria-label="Próximo">
+                        <a class="page-link pag-ancora" href="/produtos?pagina=<?= $pagina+1 ?>" aria-label="Próximo">
                             <span aria-hidden="true">&raquo;</span>
                             <span class="sr-only">Próximo</span>
                         </a>
