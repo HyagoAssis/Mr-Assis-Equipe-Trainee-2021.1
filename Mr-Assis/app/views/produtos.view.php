@@ -113,21 +113,25 @@
             <!-- Paginação -->
             <nav aria-label="Navegação de página exemplo" class="d-flex justify-content-center">
                 <ul class="pagination">
-                    <li class="page-item">
-                        <a class="page-link pag-ancora" href="/produtos?pagina=<?= $pagina-1 ?>" aria-label="Anterior">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Anterior</span>
-                        </a>
-                    </li>
+                    <?php if( array_key_exists('pagina', $_GET) && $_GET['pagina'] > 1 ): ?>
+                        <li class="page-item">
+                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= $_GET['pagina']-1 ?>" aria-label="Anterior">
+                                <span aria-hidden="true">&laquo;</span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
                     <?php for($i=0; $i<$num_paginas; $i++): ?>
                         <li class="page-item"><a class="page-link pag-ancora" href="/produtos?pagina=<?= $i+1 ?>"><?= $i+1 ?></a></li>
                     <?php endfor; ?>
-                    <li class="page-item">
-                        <a class="page-link pag-ancora" href="/produtos?pagina=<?= $pagina+1 ?>" aria-label="Próximo">
-                            <span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Próximo</span>
-                        </a>
-                    </li>
+                    <?php if( array_key_exists('pagina', $_GET) && $_GET['pagina'] < $num_paginas ): ?>
+                        <li class="page-item">
+                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= $_GET['pagina']+1 ?>" aria-label="Anterior">
+                                <span aria-hidden="true">&raquo;</span>
+                                <span class="sr-only">Anterior</span>
+                            </a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
             </nav>
 

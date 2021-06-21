@@ -38,30 +38,33 @@ class ProdutosController {
             'produtos'=>$produtos,
             'categorias'=>$categorias,
         ];
-
+        
         return view('produtos', $tables);
-
+        
     }
-
+    
     public function busca()
     {
-
+        
         $produtos = App::get('database')->selectBusca('produtos', $_GET['busca']);
         $categorias = App::get('database')->selectAll('categorias');
-
+        
         $tables = [
             'produtos'=>$produtos,
             'categorias'=>$categorias,
         ];
-
+        
         return view('produtos', $tables);
-
+        
     }
     public function produtos()
     {
+        //Pegando as categorias
+        $categorias = App::get('database')->selectAll('categorias');
+        
         //numero de itens por paginas
         $itens_por_pagina = 10;
-
+        
         // pegar a pagina atual
         if(array_key_exists('pagina', $_GET))
         {
@@ -70,13 +73,27 @@ class ProdutosController {
         else{
             $pagina = 0;
         }
-
+        
         //Numero total de produtos
         $num_produtos = App::get('database')->numLinhas('produtos');
+        
+        //Numero de paginas
+        $num_paginas = ceil($num_produtos/$itens_por_pagina);
+
+        //Verifica se a pagina esta dentro do intervalo de paginas
+        if(!((0 <= $pagina) && ($pagina <= $num_paginas)))
+        {
+            return view('produtos', [
+                                        'categorias'=>$categorias,
+                                        'num_paginas'=>$num_paginas,
+                                    ]
+            );
+        }
 
 
+        //Numero de produtos restantes
         $produtos_restantes =  $num_produtos - (($pagina)*$itens_por_pagina);
-
+        
         if( $produtos_restantes > $itens_por_pagina)
         {
             //puxar os produtos do banco    
@@ -88,18 +105,16 @@ class ProdutosController {
         }
             
         
-        //Numero de paginas
-        $num_paginas = ceil($num_produtos/$itens_por_pagina);
 
-        $categorias = App::get('database')->selectAll('categorias');
         
         $tables = [
             'produtos'=>$produtos,
             'categorias'=>$categorias,
-            'num_paginas'=>$num_paginas
+            'num_paginas'=>$num_paginas,
         ];
 
         return view('produtos', $tables);
+
     }
     
     public function create()
