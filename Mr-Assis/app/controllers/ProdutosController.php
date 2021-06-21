@@ -11,7 +11,7 @@ class ProdutosController {
         $produtos = App::get('database')->selectAll('produtos');
         $categorias = App::get('database')->selectAll('categorias');
         
-
+        
         $tables = [
             'produtos' => $produtos,
             'categorias'=> $categorias,
@@ -22,12 +22,26 @@ class ProdutosController {
     {
         
         $produto = App::get('database')->selectProduto('produtos', $_GET['id']);
-
-
+        
+        
         return view("produto", compact('produto'));
+        
+    }
+    
+    public function filtro()
+    {
+
+        $produtos = App::get('database')->selectCategoria('produtos', $_GET['categoria']);
+        $categorias = App::get('database')->selectAll('categorias');
+
+        $tables = [
+            'produtos'=>$produtos,
+            'categorias'=>$categorias,
+        ];
+
+        return view('produtos', $tables);
 
     }
-
     public function produtos()
     {
         $produtos = App::get('database')->selectAll('produtos');
@@ -78,8 +92,4 @@ class ProdutosController {
         header('Location: /admin/produtos');
     }
 
-    public function filtro()
-    {
-        
-    }
 }

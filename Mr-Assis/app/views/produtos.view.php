@@ -36,18 +36,20 @@
             <div class="col-md-6 d-flex justify-content-center ">
                 <div class="dropdown my-2 my-lg-0">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <?php if( array_key_exists('categoria', $_GET) ): ?>
+                        <?= $_GET['categoria'] ?>
+                    <?php else:?>
                         Categorias
+                    <?php endif; ?>
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <select class="form-control" name="categoria" >
-                            <?php if( !empty($categorias) ): ?>
-                                <?php foreach($categorias as $categoria): ?>
-                                    <option> <?= $categoria->nome ?> </option>
-                                <?php endforeach; ?>
-                            <?php else: ?>
-                                <p> Nenhuma categoria foi encontrada </p>
-                            <?php endif; ?>
-                        </select>
+                        <?php if( !empty($categorias) ): ?>
+                            <?php foreach ($categorias as $categoria) : ?>
+                                <a class="dropdown-item" href="/produtos/filtro?categoria=<?= $categoria->nome ?>"><?= $categoria->nome ?></a>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p> Nenhuma categoria foi encontrada </p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

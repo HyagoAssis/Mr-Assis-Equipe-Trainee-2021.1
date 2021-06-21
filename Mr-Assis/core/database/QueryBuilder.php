@@ -107,4 +107,18 @@ class QueryBuilder
         }
 
     }
+
+    public function selectCategoria($tabela, $categoria)
+    {
+        $sql = "SELECT * FROM {$tabela} WHERE categoria LIKE '{$categoria}'";
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
 }
