@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 17-Jun-2021 às 19:24
+-- Tempo de geração: 21-Jun-2021 às 17:55
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.6
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `mr-assis`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nome`) VALUES
+(1, 'Computadores'),
+(2, 'Hardware'),
+(3, 'Monitores'),
+(4, 'Impressoras'),
+(5, 'Serviços'),
+(6, 'Periféricos');
 
 -- --------------------------------------------------------
 
@@ -51,11 +74,18 @@ INSERT INTO `produtos` (`id`, `nome`, `preco`, `categoria`, `descricao`, `imagem
 (7, 'Notebook Acer Aspire 3', '4499.90', 'Notebooks', 'Ryzen 7 3700U\r\nRoda seus joguinho de fada tudo', 'Notebook-Acer-Aspire-3-AMD-Ryzen-7-3700U.jpg', 4),
 (8, 'Placa de Video GTX 1650', '1600.00', 'Peças', 'Placa de video que roda warzone no ultra', 'placa-de-video-gigabyte-nvidia-geforce-gtx-1650.jpg', 1),
 (9, 'Teclado Razer Rosinha lindo', '700.00', 'Periféricos', 'Lindo kawai tecladinho ui uiui ', 'Teclado Razer Blackwidow Tournament Chroma V2 (quartz).jpg', 7),
-(10, 'Processador dos avengers', '5000.00', 'Peças', 'HOMEM DE FERRO INVEJA ESSE PROCESSADOR', 'processador-avenger.jpg', 1);
+(10, 'Processador dos avengers', '5000.00', 'Peças', 'HOMEM DE FERRO INVEJA ESSE PROCESSADOR', 'processador-avenger.jpg', 1),
+(11, 'Notebook gamer asus', '1700.90', 'Computadores', 'Notebook que da pra jogar e viajar e jogar e tem luizinha gamer pra toda familia', 'computador.jpg', 7);
 
 --
 -- Índices para tabelas despejadas
 --
+
+--
+-- Índices para tabela `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Índices para tabela `produtos`
@@ -68,10 +98,16 @@ ALTER TABLE `produtos`
 --
 
 --
+-- AUTO_INCREMENT de tabela `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

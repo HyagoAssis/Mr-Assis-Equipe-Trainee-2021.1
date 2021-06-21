@@ -39,13 +39,15 @@
                         Categorias
                     </button>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <?php if( !empty($categorias) ): ?>
-                            <?php foreach ($categorias as $categoria) : ?>
-                                <a class="dropdown-item" href="#"><?= $categoria->nome ?></a>
-                            <?php endforeach; ?>
-                        <?php else: ?>
-                            <p> Nenhuma categoria foi encontrada </p>
-                        <?php endif; ?>
+                        <select class="form-control" name="categoria" >
+                            <?php if( !empty($categorias) ): ?>
+                                <?php foreach($categorias as $categoria): ?>
+                                    <option> <?= $categoria->nome ?> </option>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <p> Nenhuma categoria foi encontrada </p>
+                            <?php endif; ?>
+                        </select>
                     </div>
                 </div>
             </div>

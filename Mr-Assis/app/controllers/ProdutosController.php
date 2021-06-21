@@ -78,4 +78,8 @@ class ProdutosController {
         header('Location: /admin/produtos');
     }
 
+    public function filtro()
+    {
+        
+    }
 }

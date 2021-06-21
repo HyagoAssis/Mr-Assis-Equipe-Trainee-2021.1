@@ -7,6 +7,7 @@ $router->get('admin/produtos', 'ProdutosController@admProdutos');
 $router->get('produtos', 'ProdutosController@produtos');
 
 $router->get('produto', 'ProdutosController@produtoView');
+$router->get('produtos/filtro', 'ProdutosController@filtro');
 
 $router->post('admin/criar-produto', 'ProdutosController@create');
 $router->post('admin/deletar-produto','ProdutosController@delete');
