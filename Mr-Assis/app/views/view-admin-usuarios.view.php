@@ -11,6 +11,8 @@
 
     <?php require 'link-navbar-adm.php' ?>
 
+    <link rel="stylesheet" type="text/css" href="../../public/css/styles-foto-usuario.css" media="screen"> 
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -68,16 +70,15 @@
                                       <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $usuario->senha ?>">
                                     </div>
                                   </div>
-                                  <div class="form-group row" src="../../public/img/<?= $usuario->foto ?>" alt="Foto" value="<?= $usuario->foto ?>">
-                                    <label for="staticEmail" class="col-sm-2 col-form-label">Foto</label>
-                                    <div class="col-sm-10">
-                                      <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $usuario->foto ?>">
-                                    </div>
                                   </div>
+                                  <img  src="../../public/img/<?= $usuario->foto ?>" id="foto-view" alt="Foto <?= $usuario->nome ?>">
+
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                                   </div>
+                                  
                               </form>
+                              
                             </div>
                         </div>
                       </div>
@@ -100,22 +101,22 @@
                           <div class="form-group">
                               <div class="form-group">
                               <label for="exampleInputPassword1">Nome</label>
-                              <input type="nome" class="form-control" id="exampleInputPassword1" name="nome" id="nome" placeholder="<?= $usuario->nome ?>" required>
+                              <input type="nome" class="form-control" id="exampleInputPassword1" name="nome" id="nome" value="<?= $usuario->nome ?>" required>
                           </div> 
                           <div>
                               <label for="exampleInputEmail1">Endereço de email</label>
-                              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="<?= $usuario->email ?>" required>
+                              <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" value="<?= $usuario->email ?>" required>
                               <small id="emailHelp" class="form-text text-muted"></small> 
                         </div>
 
                         <div class="form-group">
                           <label for="exampleInputPassword1">Senha</label>
-                          <input type="password" class="form-control" name="senha" id="senha" placeholder="<?= $usuario->senha ?>">
+                          <input type="password" class="form-control" name="senha" id="senha" value="<?= $usuario->senha ?>">
                         </div> 
                         
                         <div class="form-group">
                           <label for="foto-usuario-input">Adicione a foto do usuario</label>
-                          <input type="file" class="form-control-file" name="foto" id="foto" placeholder="<?= $usuario->foto ?>">
+                          <input type="file" class="form-control-file" name="foto" id="foto" value="<?= $usuario->foto ?>">
                         </div>
                           
                       <input type="hidden" name="id" value="<?= $usuario->id ?>">

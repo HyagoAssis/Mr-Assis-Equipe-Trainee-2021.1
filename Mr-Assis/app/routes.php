@@ -1,7 +1,7 @@
 <?php
 
 
-$router->get('','UsuariosController@index');
+$router->get('admin/usuarios','UsuariosController@index');
 $router->get('admin/usuarios', 'UsuariosController@admUsuarios');
 $router->get('login', 'PagesController@login');
 $router->get('contato', 'PagesController@contato');
