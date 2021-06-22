@@ -2,12 +2,13 @@
 <html lang="pt-br">
 
 <head>
+   
   <!-- Meta tags Obrigatórias -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--LINK FONTE-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <? require 'links-navbar.php' ?>
+  <?php require 'links-navbar.php'?>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <!--LINK CSS-->
   <link rel="stylesheet" type="text/css" href="../../public/css/stylesquemsomos.css">
@@ -71,9 +72,10 @@
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <div class="h2imagem d-flex align-self-center">
       <h2>Av. Olegário Maciel - Santa Helena, Juiz de Fora - MG, 36015-360</h2>
-    <img src="img/gps.png" class="img-fluid" alt="Imagem responsiva">
+    <img src="../../public/img/gps.png" class="img-fluid" alt="Imagem responsiva">
    </div>
   </div>
+  
   <!-- JavaScript (Opcional) -->
   <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -85,7 +87,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
+    <?php require 'footer.php'?>
 </body>
 
 </html>
