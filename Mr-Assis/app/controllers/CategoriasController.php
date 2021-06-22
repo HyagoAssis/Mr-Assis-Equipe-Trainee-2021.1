@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Core\App;
 
-class PagesControllercategorias {
+class CategoriasController {
 
 
     public function categorias ()
