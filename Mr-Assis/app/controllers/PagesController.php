@@ -19,7 +19,7 @@ class PagesController {
     public function contato()
     {
 
-        return view('contato');
+        return view('view-contato');
 
     }
         

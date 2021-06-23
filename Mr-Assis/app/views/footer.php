@@ -65,7 +65,7 @@
             
             
             <p><i class="fas fa-home me-3"></i> Juiz de Fora, Av. Olegário Maciel, Santa Helena</p>
-            <p><i class="fas fa-envelope me-2"></i> mrassis@gmail.com</p>
+            <p><i class="fas fa-envelope me-2"></i> mrassis.informatica@gmail.com</p>
             <p><i class="fas fa-phone me-3"></i> (32) 3421-8735</p>
             
           </div>

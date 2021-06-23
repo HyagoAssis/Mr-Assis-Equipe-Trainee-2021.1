@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -29,34 +30,34 @@
     <?php require 'navbar.view.php' ?>
     
     <div class = "container">
-        <form class = "formulario">
+        <form action="envia-email.php" method="post" name="form_contato" id="form_contato">
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="inputNome">Nome</label>
-              <input type="text" class="form-control" id="inputNome" placeholder="Nome ">
+              <input type="text" class="form-control" name="nome" id="inputNome" placeholder="Nome" required>
             </div>
             <div class="form group col-md-4">
               <label for="exampleFormControlInput1">Sobrenome</label>
-              <input type="text" class="form-control" placeholder="Sobrenome">
+              <input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome" required>
             </div>
             <div class="form group col-md-4">
               <label for="exampleFormControlInput1">Telefone</label>
-              <input type="text" class="form-control" placeholder="Telefone">
+              <input type="text" class="form-control" name="telefone" placeholder="Telefone" required>
             </div>
           </div>
           <div class="form-group">
             <label for="exampleFormControlInput1">Endereço de email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+            <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nome@exemplo.com" required>
           </div>
           <div class="form-group">
             <label for="inputAddress">Assunto</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Assunto">
+            <input type="text" class="form-control" id="inputAddress" name="assunto" placeholder="Assunto" required>
           </div>
           <div class="form-group">
             <label for="exampleFormControlTextarea1">Mensagem</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
+          <input type="submit" class="btn btn-primary"<?php require ('envia-email.php');?>></input>
         </form>
     </div> 
     <div class = "containermapa">
