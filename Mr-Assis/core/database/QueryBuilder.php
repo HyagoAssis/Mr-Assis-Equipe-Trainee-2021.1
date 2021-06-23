@@ -31,10 +31,16 @@ class QueryBuilder
         }
     }
 
-    public function numLinhas($table)
+    public function numLinhas($table, $filtro, $busca)
     {
-        $sql = "SELECT COUNT(*) FROM {$table}";
-
+        //Vendo se há alguma busca
+        if( $filtro != '' )
+            $sql = "SELECT COUNT(*) FROM {$table} WHERE `categoria` LIKE '%{$filtro}%'";
+        else if( $busca != '' )
+            $sql = "SELECT COUNT(*) FROM {$table} WHERE `nome` LIKE '%{$busca}%'";
+        else
+            $sql = "SELECT COUNT(*) FROM {$table}";
+        
         try {
             $stmt = $this->pdo->prepare($sql);
 
@@ -46,10 +52,24 @@ class QueryBuilder
         }
     }
 
-    public function paginacao($table, $pagina, $itensPorPagina)
+    public function paginacao($table, $pagina, $itensPorPagina, $filtro, $busca)
     {
-        $sql = "select * from {$table} LIMIT {$pagina}, {$itensPorPagina}";
+        if( $filtro != '' )
+        {
+            //Filtro
+            $sql = "SELECT * FROM `{$table}` WHERE `categoria` LIKE '{$filtro}'";
+        }
+        else if( $busca != '')
+        {
+            //Busca
+            $sql = "SELECT * FROM {$table} WHERE `nome` LIKE '%{$busca}%' LIMIT {$pagina}, {$itensPorPagina}";
+        }
+        else{
+            //Sem filtro ou busca
+            $sql = "select * from {$table} LIMIT {$pagina},{$itensPorPagina}";
+        }
         // die(var_dump($sql));
+
 
         try {
             
@@ -132,7 +152,6 @@ class QueryBuilder
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
-            // die(var_dump($stmt->fetch(PDO::FETCH_OBJ))); 
 
             return $stmt->fetchAll(PDO::FETCH_CLASS);
         } catch (Exception $e) {
@@ -141,32 +160,4 @@ class QueryBuilder
 
     }
 
-    public function selectCategoria($tabela, $categoria)
-    {
-        $sql = "SELECT * FROM {$tabela} WHERE categoria LIKE '{$categoria}'";
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-
-    }
-
-    public function selectBusca($tabela, $busca)
-    {
-        $busca = trim($busca);
-        $sql = "SELECT * FROM {$tabela} WHERE nome LIKE '%{$busca}%'";
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
-
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
-
-    }
 }

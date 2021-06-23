@@ -36,8 +36,8 @@
             <div class="col-md-6 d-flex justify-content-center ">
                 <div class="dropdown my-2 my-lg-0">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <?php if( array_key_exists('categoria', $_GET) ): ?>
-                        <?= $_GET['categoria'] ?>
+                    <?php if( array_key_exists('filtro', $_GET) ): ?>
+                        <?= $_GET['filtro'] ?>
                     <?php else:?>
                         Categorias
                     <?php endif; ?>
@@ -45,7 +45,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <?php if( !empty($categorias) ): ?>
                             <?php foreach ($categorias as $categoria) : ?>
-                                <a class="dropdown-item" href="/produtos/filtro?categoria=<?= $categoria->nome ?>"><?= $categoria->nome ?></a>
+                                <a class="dropdown-item" href="/produtos?filtro=<?= $categoria->nome ?>"><?= $categoria->nome ?></a>
                             <?php endforeach; ?>
                         <?php else: ?>
                             <p> Nenhuma categoria foi encontrada </p>
@@ -57,8 +57,8 @@
 
             <!-- Barra de Busca -->
             <div class="col-md-6 d-flex justify-content-center">
-                <form class="form-inline my-2 my-lg-0 justify-content-center" action="/produtos/busca" method="GET">
-                    <input class="form-control mr-sm-2" type="search" name="busca" placeholder="Pesquisar" aria-label="Pesquisar">
+                <form class="form-inline my-2 my-lg-0 justify-content-center" action="/produtos" method="GET">
+                    <input class="form-control mr-sm-2" type="search" name="busca" <?php if(array_key_exists('busca', $_GET)) echo 'value="' . "{$_GET['busca']}" . '"'; ?> placeholder="Pesquisar" aria-label="Pesquisar">
                     <button class="btn btn-outline-success my-2 my-sm-0 botao-busca" type="submit" ">Pesquisar</button>
                     </form>
                 </div>
@@ -115,18 +115,21 @@
                 <ul class="pagination">
                     <?php if( array_key_exists('pagina', $_GET) && $_GET['pagina'] > 1 ): ?>
                         <li class="page-item">
-                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= $_GET['pagina']-1 ?>" aria-label="Anterior">
+                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= $_GET['pagina']-1?><?php require 'paginacao-link.php'?>" aria-label="Anterior">
                                 <span aria-hidden="true">&laquo;</span>
                                 <span class="sr-only">Anterior</span>
                             </a>
                         </li>
                     <?php endif; ?>
                     <?php for($i=0; $i<$num_paginas; $i++): ?>
-                        <li class="page-item"><a class="page-link pag-ancora" href="/produtos?pagina=<?= $i+1 ?>"><?= $i+1 ?></a></li>
+                        <li class="page-item">
+                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= $i+1?><?php require 'paginacao-link.php'?>"><?= $i+1 ?>
+                            </a>
+                        </li>
                     <?php endfor; ?>
                     <?php if( array_key_exists('pagina', $_GET) && $_GET['pagina'] < $num_paginas ): ?>
                         <li class="page-item">
-                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= $_GET['pagina']+1 ?>" aria-label="Anterior">
+                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= ($_GET['pagina']+1)?><?php require 'paginacao-link.php'?>" aria-label="Anterior">
                                 <span aria-hidden="true">&raquo;</span>
                                 <span class="sr-only">Anterior</span>
                             </a>

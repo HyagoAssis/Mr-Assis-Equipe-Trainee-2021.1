@@ -30,8 +30,7 @@ class ProdutosController {
     
     public function filtro()
     {
-
-        $produtos = App::get('database')->selectCategoria('produtos', $_GET['categoria']);
+        $produtos = App::get('database')->selectCategoria('produtos', $_GET['filtro']);
         $categorias = App::get('database')->selectAll('categorias');
 
         $tables = [
@@ -42,27 +41,19 @@ class ProdutosController {
         return view('produtos', $tables);
         
     }
-    
-    public function busca()
-    {
-        
-        $produtos = App::get('database')->selectBusca('produtos', $_GET['busca']);
-        $categorias = App::get('database')->selectAll('categorias');
-        
-        $tables = [
-            'produtos'=>$produtos,
-            'categorias'=>$categorias,
-        ];
-        
-        return view('produtos', $tables);
-        
-    }
+
     public function produtos()
     {
+        //Declarando filtro e busca
+        if( array_key_exists('filtro', $_GET) ) { $filtro = $_GET['filtro']; }
+        else { $filtro = ''; }
+
+        if(array_key_exists('busca', $_GET)) { $busca = $_GET['busca']; }
+        else { $busca = ''; }
         //Pegando as categorias
         $categorias = App::get('database')->selectAll('categorias');
         
-        //numero de itens por paginas
+        //numero de maximo de itens por paginas
         $itens_por_pagina = 10;
         
         // pegar a pagina atual
@@ -75,33 +66,32 @@ class ProdutosController {
         }
         
         //Numero total de produtos
-        $num_produtos = App::get('database')->numLinhas('produtos');
-        
+        $num_produtos = (int) App::get('database')->numLinhas('produtos', $filtro, $busca);
         //Numero de paginas
         $num_paginas = ceil($num_produtos/$itens_por_pagina);
-
+        
         //Verifica se a pagina esta dentro do intervalo de paginas
-        if(!((0 <= $pagina) && ($pagina <= $num_paginas)))
+        if(!((0 <= $pagina) && ($pagina <= $num_paginas-1)))
         {
             return view('produtos', [
-                                        'categorias'=>$categorias,
-                                        'num_paginas'=>$num_paginas,
-                                    ]
+                'categorias'=>$categorias,
+                'num_paginas'=>$num_paginas,
+                ]
             );
         }
-
-
+        
+        
         //Numero de produtos restantes
         $produtos_restantes =  $num_produtos - (($pagina)*$itens_por_pagina);
         
         if( $produtos_restantes > $itens_por_pagina)
         {
             //puxar os produtos do banco    
-            $produtos = App::get('database')->paginacao('produtos', $pagina, $itens_por_pagina);
+            $produtos = App::get('database')->paginacao('produtos', $pagina, $itens_por_pagina, $filtro, $busca);
         }else
         {
             //Caso o numero de produtos restantes for menor que itens por pagina ele mostrará so o numero de itens restantes
-            $produtos = App::get('database')->paginacao('produtos', $pagina, $produtos_restantes);
+            $produtos = App::get('database')->paginacao('produtos', $pagina * $itens_por_pagina, $produtos_restantes, $filtro, $busca);
         }
             
         
