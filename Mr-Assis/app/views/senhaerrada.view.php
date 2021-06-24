@@ -53,36 +53,11 @@
             <img src="../../public/img/icons/apple-touch-icon.png" class="brand_logo" alt="Logo">
           </div>
         </div>
-        <div class="d-flex justify-content-center form_container">
-          <form method="post" action="/login/teste" id="formlogin" name="formlogin">
-            <div class="input-group mb-3">
-              <div class="input-group-append">
-                <span class="input-group-text"><i class="fas fa-user"></i></span>
-              </div>
-
-              <input type="text" name="email" id="email" class="form-control input_user" placeholder="email@mr.com">
-
+            <div class="senhaerrada">
+            <h4> Email ou senha inválidos </h4>
             </div>
-            <div class="input-group mb-2">
-              <div class="input-group-append">
-                <span class="input-group-text"><i class="fas fa-key"></i></span>
-              </div>
-              <input type="password" name="senha" id="senha" class="form-control input_pass" placeholder="senha">
-              
-            </div>
-            <div class="form-group">
-
-            </div>
-            <div class="d-flex justify-content-center mt-3 login_container">
-              <button type="submit" name="button" class="btn login_btn">Entrar</button>
-            </div>
-          </form>
-          
-        </div>
-
-
-        <div class="d-flex justify-content-center links">
-          <a href="/contato">Voltar</a>
+        <div class="botaovoltar">
+          <a href="/login">Voltar</a>
         </div>
       </div>
     </div>

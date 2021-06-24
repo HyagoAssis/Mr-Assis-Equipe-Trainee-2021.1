@@ -13,7 +13,10 @@
   header('Location: /login' );
   exit();
  }
-  
+ else {
+        $_SESSION['email'] = $email;
+        $_SESSION['senha'] = $senha;
+}
  ?>
 <div class="container-fluid">
 <div class="row">
@@ -30,19 +33,19 @@
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/produtos">
           <span data-feather="shopping-cart"></span>
           Produtos
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/usuarios">
           <span data-feather="users"></span>
           Usuários
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/categorias">
           <span data-feather="layers"></span>
           Categorias
         </a>

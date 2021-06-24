@@ -23,16 +23,16 @@ class loginController {
        $var = App::get('database')->login('usuario',$email,$senha);
 
        if (empty($var)){
-            $msg = "email e senha invalidos";
-            
-            return  view('viewLogin',compact('msg'));
+                    
+            return  view('senhaerrada');
        }
        else{
+        
+        session_start();
         $_SESSION['email'] = $email;
         $_SESSION['senha'] = $senha;
-        session_start();
 
-        return view('viewHomeAdm');
+        return view('viewHomeAdm',compact('email','senha'));
        }
         var_dump($var);
 
