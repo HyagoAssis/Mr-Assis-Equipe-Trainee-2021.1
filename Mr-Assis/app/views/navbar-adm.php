@@ -8,7 +8,13 @@
 </li>
 </ul>
 </nav>
+ <?php if(!($_SESSION['email'])){
 
+  header('Location: /login' );
+  exit();
+ }
+  
+ ?>
 <div class="container-fluid">
 <div class="row">
 <nav class="col-md-2 d-md-block bg-light sidebar position-static">

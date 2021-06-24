@@ -15,32 +15,31 @@ class QueryBuilder
     {
         $this->pdo = $pdo;
     }
-    public function selectAll($table) {
+    public function selectAll($table)
+    {
 
         $sql = "select * from {$table}";
 
-        try{
+        try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
 
             return $stmt->fetchALL(PDO::FETCH_CLASS);
-        }catch (Exception $e) {
+        } catch (Exception $e) {
             die($e->getMessage());
         }
-
     }
-    public function insert($tables,$parametros){
+    public function insert($tables, $parametros)
+    {
 
-       $sql= "INSERT INTO `{$tables}`(`name`) VALUES ('{$parametros['name']}')";
-       
-       try{
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute();
+        $sql = "INSERT INTO `{$tables}`(`name`) VALUES ('{$parametros['name']}')";
 
-    }catch (Exception $e) {
-        die($e->getMessage());
-    }
-
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
     public function delete($table, $id)
@@ -51,41 +50,47 @@ class QueryBuilder
             $stmt = $this->pdo->prepare($sql);
 
             $stmt->execute();
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
-    public function edit($tabela , $parametros)
+    public function edit($tabela, $parametros)
     {
         $sql = "UPDATE `{$tabela}` SET ";
-        
-        
-        foreach($parametros as $chave => $parametro)
-        {
+
+
+        foreach ($parametros as $chave => $parametro) {
             $sql = $sql . "`{$chave}` = '{$parametro}', ";
         }
-        
-        
+
+
         $sql = rtrim($sql, " " . ",");
-        
-        
+
+
         $sql = $sql . " WHERE `id` = {$parametros['id']}";
-        
+
 
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute();
-            
         } catch (Exception $e) {
             die($e->getMessage());
         }
+    }
+
+    public function login($table, $email, $senha)
+    {
+
+        $sql = "select 'email' from {$table} where email='{$email}'and senha='{$senha}'";
         
+        
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+            return $stmt->fetchALL(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
-
-            
-    
-    }
-    
-
-
+}
