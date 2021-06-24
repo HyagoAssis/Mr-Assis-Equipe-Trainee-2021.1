@@ -15,6 +15,7 @@ class ContatoController {
     }
 
     public function email(){
+
                 
         $nome = $_POST['nome'];
         $sobrenome = $_POST['sobrenome'];
@@ -22,9 +23,6 @@ class ContatoController {
         $assunto = $_POST['assunto'];
         $mensagem = $_POST['mensagem'];
 
-        //require 'vendor/phpmailer/PHPMailer.php';
-        // Importar as classes 
-        
         // Carregar o autoloader do composer
         require 'vendor/autoload.php';
 
@@ -37,9 +35,6 @@ class ContatoController {
         $mail->Username = 'mrassis.informatica@gmail.com';
         $mail->Password = 'assisinformatica';
         $mail->Port = 587;
-
-        // $mail->From="mrassis.informatica@gmail.com";
-        // $mail->FromName="Administrador";
 
         //configuraçao remetente
         $mail->setFrom($mail->Username,"MrAssis");
@@ -64,14 +59,15 @@ class ContatoController {
         //$mail->AltBody = 'Para visualizar essa mensagem acesse http://site.com.br/mail';
         //$mail->addAttachment('/tmp/image.jpg', 'nome.jpg');
 
-        if(!$mail->send()) {
-            echo 'Não foi possível enviar a mensagem.<br>';
-            echo 'Erro: ' . $mail->ErrorInfo;
-        } else{
+        if($mail->send()) {
+            $m =  "Obrigado pelo contato, seu email foi enviado com sucesso";
             
+        } else{
+            $m = "Erro" . $mail->ErrorInfo;;
         }
 
-        header('Location: /contato');
+        return view('view-contato',compact('m'));
+        
     }
     
      

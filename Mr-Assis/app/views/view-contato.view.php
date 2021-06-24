@@ -91,7 +91,11 @@
             <textarea class="form-control" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>
           </div>
           <input type="submit" class="btn btn-primary" ></input>
-        </form>
+            
+         </form>
+         <?php if(isset($m)){
+                echo '<p class = "mensagem">' . $m .'</p>' ;      
+            } ?>
         
     </div> 
     <div class = "containermapa">
