@@ -75,7 +75,7 @@
                                     <input type="hidden" value="<?= $produto->id ?>" name="id">
                                     <button class="btn btn-link-produto" type="submit">
                                         <div class="zoom">
-                                            <img class="card-img-top img-produto" src="../../public/img/<?= $produto->imagem ?>" alt="Imagem <?= $produto->nome ?>">
+                                            <img class="card-img-top img-produto" src="../../public/img/produtos/<?= $produto->imagem ?>" alt="Imagem <?= $produto->nome ?>">
                                         </div>
                                     </button>
                                 </form>
@@ -129,9 +129,9 @@
                     <?php endfor; ?>
                     <?php if( array_key_exists('pagina', $_GET) && $_GET['pagina'] < $num_paginas ): ?>
                         <li class="page-item">
-                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= ($_GET['pagina']+1)?><?php require 'paginacao-link.php'?>" aria-label="Anterior">
+                            <a class="page-link pag-ancora" href="/produtos?pagina=<?= ($_GET['pagina']+1)?><?php require 'paginacao-link.php'?>" aria-label="Posterior">
                                 <span aria-hidden="true">&raquo;</span>
-                                <span class="sr-only">Anterior</span>
+                                <span class="sr-only">Posterior</span>
                             </a>
                         </li>
                     <?php endif; ?>

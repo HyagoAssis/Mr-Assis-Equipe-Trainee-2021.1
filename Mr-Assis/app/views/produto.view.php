@@ -26,7 +26,7 @@
     <div class="container conteudo pt-3 pb-3">
         <div class="row mb-5 ">
             <div class="col-md-4">
-                    <img class="img-produto" src="../../public/img/<?= $produto[0]->imagem ?>" alt="Foto <?= $produto[0]->nome ?>">
+                    <img class="img-produto" src="../../public/img/produtos/<?= $produto[0]->imagem ?>" alt="Foto <?= $produto[0]->nome ?>">
             </div>
             <div class="col-md-8 pl-4 pr-4">
                 <div class="row mb-4 ">

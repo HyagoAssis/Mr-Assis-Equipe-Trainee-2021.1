@@ -4,6 +4,7 @@ use App\Core\Router;
 
 $router->get('', 'PagesController@index');
 $router->get('admin/produtos', 'ProdutosController@admProdutos');
+$router->get('admin', 'ProdutosController@adm');
 
 $router->get('produtos', 'ProdutosController@produtos');
 

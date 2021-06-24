@@ -57,7 +57,7 @@ class QueryBuilder
         if( $filtro != '' )
         {
             //Filtro
-            $sql = "SELECT * FROM `{$table}` WHERE `categoria` LIKE '{$filtro}'";
+            $sql = "SELECT * FROM `{$table}` WHERE `categoria` LIKE '{$filtro}' LIMIT {$pagina}, {$itensPorPagina}";
         }
         else if( $busca != '')
         {

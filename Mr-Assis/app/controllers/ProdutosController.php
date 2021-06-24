@@ -6,6 +6,10 @@ use Exception;
 
 class ProdutosController {
 
+    public function adm()
+    {
+        return view('admin-home');
+    }
     public function admProdutos()
     {
         $produtos = App::get('database')->selectAll('produtos');
@@ -50,11 +54,12 @@ class ProdutosController {
 
         if(array_key_exists('busca', $_GET)) { $busca = $_GET['busca']; }
         else { $busca = ''; }
+
         //Pegando as categorias
         $categorias = App::get('database')->selectAll('categorias');
         
         //numero de maximo de itens por paginas
-        $itens_por_pagina = 10;
+        $itens_por_pagina = 9;
         
         // pegar a pagina atual
         if(array_key_exists('pagina', $_GET))
@@ -67,6 +72,7 @@ class ProdutosController {
         
         //Numero total de produtos
         $num_produtos = (int) App::get('database')->numLinhas('produtos', $filtro, $busca);
+        
         //Numero de paginas
         $num_paginas = ceil($num_produtos/$itens_por_pagina);
         

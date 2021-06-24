@@ -13,7 +13,7 @@
           </div>
 
 
-            <img class="modal-img" src="../../public/img/<?= $produto->imagem ?>" id="foto-view" alt="Foto <?= $produto->nome ?>">
+            <img class="modal-img" src="../../public/img/produtos/<?= $produto->imagem ?>" id="foto-view" alt="Foto <?= $produto->nome ?>">
             <div class="row">
               <div class="col-md-12">
                 <h2 class="modal-titulo"><?= $produto->nome ?></h2>

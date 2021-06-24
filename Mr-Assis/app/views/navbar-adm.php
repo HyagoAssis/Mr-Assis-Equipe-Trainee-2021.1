@@ -1,6 +1,6 @@
 
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow position-static">
-<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">
+<a class="navbar-brand col-sm-3 col-md-2 mr-0" href="/admin">
     <img src="../../public/img/Mr.Assis.png" alt="Logo Mr. Assis" class="img-fluid ">
 </a>
 <ul class="navbar-nav px-3">
@@ -16,28 +16,27 @@
   <div id="mySidebar" class="sidebar-sticky">
     <ul class="nav flex-column">
       <button id="threeline-icon" class="btn btn-secondary" onclick="openNav()">&#9776;</button>
-      <!-- <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776; Open adms</li> -->
       <li class="nav-item">
-        <a class="nav-link active" href="#">
+        <a class="nav-link active" href="/admin">
           <span data-feather="home"></span>
           Dashboard <span class="sr-only">(current)</span>
         </a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/admin/produtos">
           <span data-feather="shopping-cart"></span>
           Produtos
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/admin/usuarios">
           <span data-feather="users"></span>
           Usuários
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/admin/categorias">
           <span data-feather="layers"></span>
           Categorias
         </a>
