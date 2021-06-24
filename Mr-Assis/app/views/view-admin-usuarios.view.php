@@ -43,7 +43,7 @@
             <tbody>
               <?php foreach ($usuarios as $usuario) : ?>
 
-                <?php require 'modaldelete.php' ?>
+                <?php require 'modal-delete-user.php' ?>
 
               <!-- Modal view-->
                     <div class="modal fade bd-example-modal-lg" id="dadosusuario<?= $usuario->id ?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
