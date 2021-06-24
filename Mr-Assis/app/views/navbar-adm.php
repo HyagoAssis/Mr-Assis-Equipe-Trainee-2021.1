@@ -4,39 +4,77 @@
 </a>
 <ul class="navbar-nav px-3">
 <li class="nav-item text-nowrap">
+<<<<<<< HEAD
   <a class="nav-link" href="#">Sair</a>
+=======
+  <a class="nav-link" href="/login/logout">Sair</a>
+>>>>>>> main
 </li>
 </ul>
 </nav>
 
+<<<<<<< HEAD
+=======
+ <?php 
+ 
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+
+  if(!($_SESSION['user'])){
+  
+  header('Location: /login' );
+  exit();
+ }
+ 
+ ?>
+>>>>>>> main
 <div class="container-fluid">
 <div class="row">
 <nav class="col-md-2 d-md-block bg-light sidebar position-static">
   <div id="mySidebar" class="sidebar-sticky">
     <ul class="nav flex-column">
       <button id="threeline-icon" class="btn btn-secondary" onclick="openNav()">&#9776;</button>
+<<<<<<< HEAD
       <!-- <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776; Open adms</li> -->
       <li class="nav-item">
         <a class="nav-link active" href="#">
+=======
+      <li class="nav-item">
+        <a class="nav-link active" href="/admin">
+>>>>>>> main
           <span data-feather="home"></span>
           Dashboard <span class="sr-only">(current)</span>
         </a>
       </li>
       
       <li class="nav-item">
+<<<<<<< HEAD
         <a class="nav-link" href="#">
+=======
+        <a class="nav-link" href="/admin/produtos">
+>>>>>>> main
           <span data-feather="shopping-cart"></span>
           Produtos
         </a>
       </li>
       <li class="nav-item">
+<<<<<<< HEAD
         <a class="nav-link" href="#">
+=======
+        <a class="nav-link" href="/admin/usuarios">
+>>>>>>> main
           <span data-feather="users"></span>
           Usuários
         </a>
       </li>
       <li class="nav-item">
+<<<<<<< HEAD
         <a class="nav-link" href="#">
+=======
+        <a class="nav-link" href="/admin/categorias">
+>>>>>>> main
           <span data-feather="layers"></span>
           Categorias
         </a>

@@ -2,14 +2,16 @@
 <html lang="pt-br">
 
 <head>
+   
   <!-- Meta tags Obrigatórias -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--LINK FONTE-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
+  <?php require 'links-navbar.php'?>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <!--LINK CSS-->
-  <link rel="stylesheet" type="text/css" href="css/stylesquemsomos.css">
+  <link rel="stylesheet" type="text/css" href="../../public/css/stylesquemsomos.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -17,25 +19,13 @@
 </head>
 
 <body>
-
-  <!--LOGO MR ASSIS-->
-  <div class="logo">
-    <img src="img/Mr. Assis.png" class="img-fluid" alt="Imagem responsiva">
-  </div>
+  
   <!--NAV BAR-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página atual)</span></a>
-        <a class="nav-item nav-link" href="#">Produtos</a>
-        <a class="nav-item nav-link" href="#">Quem somos</a>
-      </div>
-    </div>
-  </nav>
+  <?php require 'navbar.view.php' ?>
   <!--Imagem da equipe do quem somos-->
   <div class="equipegeral">
   <div class="imgequipe">
-    <img src="img/group-of-people-working-out-business-plan-in-an-office.jpg" class="img-fluid" alt="Imagem responsiva">
+    <img src="../../public/img/group-of-people-working-out-business-plan-in-an-office.jpg" class="img-fluid" alt="Imagem responsiva">
   </div>
   <!--Quem somos texto-->
   <div class="quemsomostexto">
@@ -52,7 +42,7 @@
   </div>
   <!--Imagem da parte valores-->
   <div class="valores">
-    <img src="img/valores.png" class="img-fluid" alt="Imagem responsiva">
+    <img src="../../public/img/valores.png" class="img-fluid" alt="Imagem responsiva">
     <!--Texto dos valores-->
     <h1>Nossos Valores</h1>
     <ul>
@@ -70,9 +60,9 @@
   <div class="nossaloja justify-content-center">
     <h1>Nossa Loja</h1>
     <!--Imagens da loja-->
-    <img src="img/loja1.jpg" alt="...">
-    <img src="img/loja2.jpg" alt="...">
-    <img src="img/loja3.jpg" alt="...">
+    <img src="../../public/img/loja1.jpg" alt="...">
+    <img src="../../public/img/loja2.jpg" alt="...">
+    <img src="../../public/img/loja3.jpg" alt="...">
   </div>
   <!--Onde estamos -->
   <div class="gps justify-content-center">
@@ -82,9 +72,10 @@
       width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       <div class="h2imagem d-flex align-self-center">
       <h2>Av. Olegário Maciel - Santa Helena, Juiz de Fora - MG, 36015-360</h2>
-    <img src="img/gps.png" class="img-fluid" alt="Imagem responsiva">
+    <img src="../../public/img/gps.png" class="img-fluid" alt="Imagem responsiva">
    </div>
   </div>
+  
   <!-- JavaScript (Opcional) -->
   <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -96,7 +87,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
+    <?php require 'footer.php'?>
 </body>
 
 </html>

@@ -5,6 +5,7 @@ use App\Core\App;
 
 class PagesController {
 
+<<<<<<< HEAD
     public function index()
     {   
         return view('index');
@@ -15,4 +16,13 @@ class PagesController {
     //     return view('view-contato');
 
     // }
+=======
+
+    public function index()
+    {   
+        return view('index');
+    }
+    
+        
+>>>>>>> main
 }

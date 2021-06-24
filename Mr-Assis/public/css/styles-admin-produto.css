@@ -1,13 +1,9 @@
 body {
     font-size: .875rem;
   }
-
-.modal-conteudo{
-    width: 100% !important;
-}
-.modal-img{
-    width: 200px !important;
-    align-self: center;
+#foto-view{
+  width: 300px !important;
+  margin: auto;
 }
   .feather {
     width: 16px;

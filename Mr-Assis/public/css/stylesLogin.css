@@ -7,6 +7,19 @@
         background: #021b3b !important;
     }
 
+    .senhaerrada {
+        margin-top: 30%;
+        text-align: center;       
+        font-size: medium;
+        color:#021b3b;
+    }
+    .botaovoltar {
+        margin-top: 60%;
+        size: 100px;
+        text-align: center;       
+        
+        color:#021b3b;
+    }
 
     .user_card {
         height: 400px;

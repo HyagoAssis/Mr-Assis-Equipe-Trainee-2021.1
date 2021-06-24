@@ -32,7 +32,7 @@ class UsuariosController{
             
         ];
 
-        App::get('database')->insert('usuarios', $parametros);
+        App::get('database')->insereUsuario('usuarios', $parametros);
 
         header('Location: /admin/usuarios');
     }

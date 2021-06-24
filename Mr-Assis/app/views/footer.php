@@ -81,4 +81,8 @@
       © 2021 Copyright   
     </div>
     <!-- Copyright -->
+<<<<<<< HEAD:Mr-Assis/app/views/footer.php
   </footer>
+=======
+  </footer>
+>>>>>>> main:Mr-Assis/app/views/footer.html

@@ -1,7 +1,15 @@
 body {
     font-size: .875rem;
   }
-  
+  main{
+    width: 80% !important;
+    height: 100% !important;
+    margin-top: 2.5%;
+  }
+  .icones-admin{
+    font-size: 10em;
+    text-align: center;
+  }
   .feather {
     width: 16px;
     height: 16px;
@@ -107,6 +115,9 @@ body {
   }
 
   @media (max-width: 767px){
+    main{
+      width: 100% !important;
+    }
 
     .sidebar-sticky li{
       display: none;
