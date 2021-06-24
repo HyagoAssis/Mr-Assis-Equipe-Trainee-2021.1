@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="d-flex justify-content-center form_container">
-          <form method="post" action="/login/teste" id="formlogin" name="formlogin">
+          <form method="post" action="/login/log" id="formlogin" name="formlogin">
             <div class="input-group mb-3">
               <div class="input-group-append">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>

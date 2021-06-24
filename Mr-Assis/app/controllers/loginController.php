@@ -6,7 +6,7 @@ use App\Core\App;
 class loginController {
 
 
-    public function login()
+    public function index()
     {   
          
         
@@ -15,7 +15,7 @@ class loginController {
         return view('viewLogin');       
     }
 
-    public function teste(){
+    public function login(){
 
         $email= $_POST['email'];
         $senha= $_POST['senha'];
@@ -29,16 +29,23 @@ class loginController {
        else{
         
         session_start();
-        $_SESSION['email'] = $email;
-        $_SESSION['senha'] = $senha;
+        $_SESSION['user'] = 'ativo';
+        
 
-        return view('viewHomeAdm',compact('email','senha'));
+        return view('viewHomeAdm');
        }
-        var_dump($var);
+        
 
     }
         
+    public function logout()
+    {
+       session_start();
+       session_destroy();
 
+        header('location: /login');
+
+    }
        
         
 }

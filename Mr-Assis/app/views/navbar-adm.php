@@ -4,19 +4,24 @@
 </a>
 <ul class="navbar-nav px-3">
 <li class="nav-item text-nowrap">
-  <a class="nav-link" href="#">Sair</a>
+  <a class="nav-link" href="/login/logout">Sair</a>
 </li>
 </ul>
 </nav>
- <?php if(!($_SESSION['email'])){
 
+ <?php 
+ 
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+
+  if(!($_SESSION['user'])){
+  
   header('Location: /login' );
   exit();
  }
- else {
-        $_SESSION['email'] = $email;
-        $_SESSION['senha'] = $senha;
-}
+ 
  ?>
 <div class="container-fluid">
 <div class="row">
