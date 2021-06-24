@@ -1,5 +1,40 @@
 <!DOCTYPE html>
+<?php
 
+// if($_SERVER['REQUEST_METHOD'] == 'POST'){
+   
+//    $erro ='';
+   
+//    if(!isset($_POST['text_nome']) ||
+//       !isset($_POST['text_sobrenome']) ||
+//       !isset($_POST['text_email']) ||
+//       !isset($_POST['text_assunto']) || 
+//       !isset($_POST['text_telefone'])){
+       
+//        $erro = "Pelo menos um dos campos não existe";
+//    }
+// }
+
+// if(empty($erro)){
+   
+//   //  $nome = $_POST['text_nome'];
+//   //  $sobrenome = $_POST['text_sobrenome'];
+//    $email = $_POST['text_email'];
+//   //  $assunto = $_POST['text_assunto'];
+//   //  $mensagem = $_POST['text_mensagem'];
+   
+   
+//    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+//        $erro = "Endereço de e-mail inválido";
+//    }
+//    if(empty($erro)){
+//        include('envia-email.php');
+//    }
+//}
+
+
+
+?>
 <html lang="pt-BR">
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -30,35 +65,36 @@
     <?php require 'navbar.view.php' ?>
     
     <div class = "container">
-        <form action="envia-email.php" method="post" name="form_contato" id="form_contato">
+        <form action="envia-email.php" method="POST" name="form_contato" id="form_contato">
           <div class="form-row">
             <div class="form-group col-md-4">
-              <label for="inputNome">Nome</label>
-              <input type="text" class="form-control" name="nome" id="inputNome" placeholder="Nome" required>
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" name="nome" placeholder="Nome" required>
             </div>
             <div class="form group col-md-4">
-              <label for="exampleFormControlInput1">Sobrenome</label>
+              <label for="sobrenome">Sobrenome</label>
               <input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome" required>
             </div>
             <div class="form group col-md-4">
-              <label for="exampleFormControlInput1">Telefone</label>
+              <label for="telefone">Telefone</label>
               <input type="text" class="form-control" name="telefone" placeholder="Telefone" required>
             </div>
           </div>
           <div class="form-group">
-            <label for="exampleFormControlInput1">Endereço de email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" name="email" placeholder="nome@exemplo.com" required>
+            <label for="email">Endereço de email</label>
+            <input type="email" class="form-control"  name="email" placeholder="email" required>
           </div>
           <div class="form-group">
-            <label for="inputAddress">Assunto</label>
+            <label for="assunto">Assunto</label>
             <input type="text" class="form-control" id="inputAddress" name="assunto" placeholder="Assunto" required>
           </div>
           <div class="form-group">
-            <label for="exampleFormControlTextarea1">Mensagem</label>
+            <label for="mensagem">Mensagem</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>
           </div>
-          <input type="submit" class="btn btn-primary"<?php require ('envia-email.php');?>></input>
+          <input type="submit" class="btn btn-primary" <?php require ('envia-email.php');?>></input>
         </form>
+        
     </div> 
     <div class = "containermapa">
         <div class = "mapa">

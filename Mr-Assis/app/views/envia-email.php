@@ -1,6 +1,6 @@
 <?php
 
-$nome = utf8_encode($_POST['nome']);
+$nome = $_POST['nome'];
 $sobrenome = $_POST['sobrenome'];
 $email = $_POST['email'];
 $assunto = $_POST['assunto'];
@@ -45,7 +45,6 @@ $mail->Subject = $assunto;
 $conteudo_email = "
 Voce recebeu uma mensagem de $nome $sobrenome ($email):
 <br><br>
-
 Mensagem: <br>
 $mensagem
 ";
@@ -66,4 +65,3 @@ if(!$mail->send()) {
 } else{
     
 }
-

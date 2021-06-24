@@ -10,17 +10,9 @@ class PagesController {
         return view('index');
     } 
     
-    public function login()
-    {
-
-        return view('login');
-
-    }
-    public function contato()
-    {
+    public function contato(){
 
         return view('view-contato');
 
     }
-        
 }
