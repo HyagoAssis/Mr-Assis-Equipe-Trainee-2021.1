@@ -28,3 +28,9 @@ body{
     transform: scale(1.1);
     cursor: pointer;
 }
+.btn-link-produto{
+    background-color: transparent !important;
+}
+.img-produto{
+    min-width: 260px;
+}

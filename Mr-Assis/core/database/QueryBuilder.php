@@ -54,25 +54,23 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    public function edit($tabela, $parametros)
+       
+    public function numLinhas($table, $filtro, $busca)
     {
-        $sql = "UPDATE `{$tabela}` SET ";
-
-
-        foreach ($parametros as $chave => $parametro) {
-            $sql = $sql . "`{$chave}` = '{$parametro}', ";
-        }
-
-
-        $sql = rtrim($sql, " " . ",");
-
-
-        $sql = $sql . " WHERE `id` = {$parametros['id']}";
-
-
+        //Vendo se há alguma busca
+        if( $filtro != '' )
+            $sql = "SELECT COUNT(*) FROM {$table} WHERE `categoria` LIKE '%{$filtro}%'";
+        else if( $busca != '' )
+            $sql = "SELECT COUNT(*) FROM {$table} WHERE `nome` LIKE '%{$busca}%'";
+        else
+            $sql = "SELECT COUNT(*) FROM {$table}";
+        
         try {
             $stmt = $this->pdo->prepare($sql);
+
             $stmt->execute();
+
+            return $stmt->fetchColumn();
         } catch (Exception $e) {
             die($e->getMessage());
         }
@@ -93,4 +91,102 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+
+    public function paginacao($table, $pagina, $itensPorPagina, $filtro, $busca)
+    {
+        if( $filtro != '' )
+        {
+            //Filtro
+            $sql = "SELECT * FROM `{$table}` WHERE `categoria` LIKE '{$filtro}' LIMIT {$pagina}, {$itensPorPagina}";
+        }
+        else if( $busca != '')
+        {
+            //Busca
+            $sql = "SELECT * FROM {$table} WHERE `nome` LIKE '%{$busca}%' LIMIT {$pagina}, {$itensPorPagina}";
+        }
+        else{
+            //Sem filtro ou busca
+            $sql = "select * from {$table} LIMIT {$pagina},{$itensPorPagina}";
+        }
+        // die(var_dump($sql));
+
+
+        try {
+            
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute();
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
+
+    public function insereProdutos ($table, $parametros)
+    {
+        $sql = sprintf(
+            'insert into %s (%s) values(%s)',
+            $table,
+            implode(', ', array_keys($parametros)),
+            ':'. implode(', :', array_keys($parametros))
+        );
+        
+        try {
+            $stmt = $this->pdo->prepare($sql);
+
+            $stmt->execute($parametros);
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
+
+    
+
+    public function edit($tabela , $parametros)
+    {
+        $sql = "UPDATE `{$tabela}` SET ";
+        
+        //Adicionando os parametros
+        foreach($parametros as $chave => $parametro)
+        {
+            $sql = $sql . "`{$chave}` = '{$parametro}', ";
+        }
+        
+        //Tirando a ultima virgula
+        $sql = rtrim($sql, " " . ",");
+        
+        //Adicionando o id
+        $sql = $sql . " WHERE `id` = {$parametros['id']}";
+        
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+            
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+        
+    }
+
+    public function selectProduto($tabela, $id)
+    {
+        $sql = "SELECT * FROM $tabela WHERE id = {$id}";
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute();
+
+
+            return $stmt->fetchAll(PDO::FETCH_CLASS);
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
+
+    }
+
 }

@@ -29,28 +29,27 @@
   <div id="mySidebar" class="sidebar-sticky">
     <ul class="nav flex-column">
       <button id="threeline-icon" class="btn btn-secondary" onclick="openNav()">&#9776;</button>
-      <!-- <li id="threeline-icon" class="threeline-icon" onclick="openNav()">&#9776; Open adms</li> -->
       <li class="nav-item">
-        <a class="nav-link active" href="#">
+        <a class="nav-link active" href="/admin">
           <span data-feather="home"></span>
           Dashboard <span class="sr-only">(current)</span>
         </a>
       </li>
       
       <li class="nav-item">
-        <a class="nav-link" href="/produtos">
+        <a class="nav-link" href="/admin/produtos">
           <span data-feather="shopping-cart"></span>
           Produtos
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/usuarios">
+        <a class="nav-link" href="/admin/usuarios">
           <span data-feather="users"></span>
           Usuários
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/categorias">
+        <a class="nav-link" href="/admin/categorias">
           <span data-feather="layers"></span>
           Categorias
         </a>
