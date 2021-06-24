@@ -10,9 +10,9 @@ class PagesController {
         return view('index');
     } 
     
-    public function contato(){
+    // public function contato(){
 
-        return view('view-contato');
+    //     return view('view-contato');
 
-    }
+    // }
 }

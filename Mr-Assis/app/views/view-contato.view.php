@@ -32,8 +32,6 @@
 //    }
 //}
 
-
-
 ?>
 <html lang="pt-BR">
     <head>
@@ -65,7 +63,7 @@
     <?php require 'navbar.view.php' ?>
     
     <div class = "container">
-        <form action="envia-email.php" method="POST" name="form_contato" id="form_contato">
+        <form action="contato/email" method="POST" name="form_contato" id="form_contato">
           <div class="form-row">
             <div class="form-group col-md-4">
               <label for="nome">Nome</label>
@@ -92,7 +90,7 @@
             <label for="mensagem">Mensagem</label>
             <textarea class="form-control" id="exampleFormControlTextarea1" name="mensagem" rows="3"></textarea>
           </div>
-          <input type="submit" class="btn btn-primary" <?php require ('envia-email.php');?>></input>
+          <input type="submit" class="btn btn-primary" ></input>
         </form>
         
     </div> 
