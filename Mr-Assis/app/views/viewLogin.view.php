@@ -82,7 +82,7 @@
 
 
         <div class="d-flex justify-content-center links">
-          <a href="/contato">Voltar</a>
+          <a href="/">Voltar</a>
         </div>
       </div>
     </div>

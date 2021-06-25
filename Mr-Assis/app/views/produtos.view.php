@@ -18,6 +18,7 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/410c009f17.js" crossorigin="anonymous"></script>
+    
     <?php require 'links-navbar.php' ?>
 
     <title>Produtos - Mr. Assis</title>
@@ -101,7 +102,7 @@
                             </div>
                         <?php endforeach; ?>
                 <?php else: ?>
-                <div class="container d-flex justify-content-center mt-5 mb-5">
+                <div class="container d-flex justify-content-center mt-auto mb-auto">
                     <p>Nenhum Produto encontrado :(</p>
                 </div>
                 <?php endif; ?>

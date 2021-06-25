@@ -4,7 +4,8 @@
       <!-- Facebook -->
       <a
         class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
+        href="https://www.facebook.com/"
+        target="blank"
         role="button"
         data-mdb-ripple-color="dark"
         ><i class="fab fa-facebook-f"></i
@@ -13,8 +14,9 @@
       <!-- Twitter -->
       <a
         class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
+        href="https://twitter.com/"
         role="button"
+        target="blank"
         data-mdb-ripple-color="dark"
         ><i class="fab fa-twitter"></i
       ></a>
@@ -22,8 +24,9 @@
       <!-- Google -->
       <a
         class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
+        href="https://mail.google.com/"
         role="button"
+        target="blank"
         data-mdb-ripple-color="dark"
         ><i class="fab fa-google"></i
       ></a>
@@ -31,8 +34,9 @@
       <!-- Instagram -->
       <a
         class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
+        href="https://www.instagram.com/"
         role="button"
+        target="blank"
         data-mdb-ripple-color="dark"
         ><i class="fab fa-instagram"></i
       ></a>
@@ -40,8 +44,9 @@
       <!-- Linkedin -->
       <a
         class="btn btn-link btn-floating btn-lg text-dark m-1"
-        href="#!"
+        href="https://www.linkedin.com/"
         role="button"
+        target="blank"
         data-mdb-ripple-color="dark"
         ><i class="fab fa-linkedin"></i
       ></a>
@@ -81,8 +86,4 @@
       © 2021 Copyright   
     </div>
     <!-- Copyright -->
-<<<<<<< HEAD:Mr-Assis/app/views/footer.php
   </footer>
-=======
-  </footer>
->>>>>>> main:Mr-Assis/app/views/footer.html

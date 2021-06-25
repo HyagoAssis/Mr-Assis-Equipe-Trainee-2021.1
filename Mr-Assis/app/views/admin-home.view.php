@@ -22,9 +22,9 @@
                 <i class="fas fa-users icones-admin"></i>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title align-self-center">Usuários</h5>
-                        <form action="/admin/usuarios" method="POST" class="align-self-center">
-                            <button type="submit" class="btn btn-primary align-self-center">Visitar</button>
-                        </form>
+                        <div class="align-self-center">
+                            <a href="/admin/usuarios" class="btn btn-primary align-self-center">Visitar</a>
+                        </div>
                     </div>
                 </div>
 
@@ -32,9 +32,9 @@
                 <i class="fas fa-boxes icones-admin"></i>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title align-self-center">Produtos</h5>
-                        <form action="/admin/produtos" method="GET" class="align-self-center">
-                            <button type="submit" class="btn btn-primary align-self-center">Visitar</button>
-                        </form>
+                        <div class="align-self-center">
+                            <a href="/admin/produtos" class="btn btn-primary align-self-center">Visitar</a>
+                        </div>
                     </div>
                 </div>
 
@@ -42,9 +42,9 @@
                 <i class="fas fa-filter icones-admin"></i>
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title align-self-center">Categorias</h5>
-                        <form action="/admin/categorias" method="POST" class="align-self-center">
-                            <button type="submit" class="btn btn-primary align-self-center">Visitar</button>
-                        </form>
+                        <div class="align-self-center">
+                            <a href="/admin/categorias" class="btn btn-primary align-self-center">Visitar</a>
+                        </div>
                     </div>
                 </div>
 

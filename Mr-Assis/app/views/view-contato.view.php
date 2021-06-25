@@ -1,46 +1,8 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<?php
-
-// if($_SERVER['REQUEST_METHOD'] == 'POST'){
-   
-//    $erro ='';
-   
-//    if(!isset($_POST['text_nome']) ||
-//       !isset($_POST['text_sobrenome']) ||
-//       !isset($_POST['text_email']) ||
-//       !isset($_POST['text_assunto']) || 
-//       !isset($_POST['text_telefone'])){
-       
-//        $erro = "Pelo menos um dos campos não existe";
-//    }
-// }
-
-// if(empty($erro)){
-   
-//   //  $nome = $_POST['text_nome'];
-//   //  $sobrenome = $_POST['text_sobrenome'];
-//    $email = $_POST['text_email'];
-//   //  $assunto = $_POST['text_assunto'];
-//   //  $mensagem = $_POST['text_mensagem'];
-   
-   
-//    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-//        $erro = "Endereço de e-mail inválido";
-//    }
-//    if(empty($erro)){
-//        include('envia-email.php');
-//    }
-//}
-
-?>
-=======
->>>>>>> main
 <html lang="pt-BR">
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@1,300&family=Playfair+Display&display=swap" rel="stylesheet">
-        <script type="text/javascript" src = "js/scripts.js"></script>
        
       <!-- links do site MDB -->
         <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
@@ -56,27 +18,16 @@
           <link rel="stylesheet" href="css/mdb.min.css" />
         <!-- Required meta tags -->
         <meta charset="utf-8">
-<<<<<<< HEAD
-<<<<<<< HEAD:Mr-Assis/app/views/view-contato.view.php
 
-        <?php require 'links-navbar.php' ?>
-
-=======
->>>>>>> main:Mr-Assis/app/views/contato.view.php
-=======
->>>>>>> main
+        <!-- CSS -->
         <link rel="stylesheet" href="../../public/css/stylescontato.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           
       </head>
 <body>
-<<<<<<< HEAD
-<<<<<<< HEAD:Mr-Assis/app/views/view-contato.view.php
+
     <?php require 'navbar.view.php' ?>
-    
-=======
-<?php require 'navbar.view.php' ?>
->>>>>>> main:Mr-Assis/app/views/contato.view.php
+
     <div class = "container">
         <form action="contato/email" method="POST" name="form_contato" id="form_contato">
           <div class="form-row">
@@ -111,40 +62,6 @@
          <?php if(isset($m)){
                 echo '<p class = "mensagem">' . $m .'</p>' ;      
             } ?>
-        
-=======
-<?php require 'navbar.view.php' ?>
-    <div class = "container">
-        <form class = "formulario">
-          <div class="form-row">
-            <div class="form-group col-md-4">
-              <label for="inputNome">Nome</label>
-              <input type="text" class="form-control" id="inputNome" placeholder="Nome ">
-            </div>
-            <div class="form group col-md-4">
-              <label for="exampleFormControlInput1">Sobrenome</label>
-              <input type="text" class="form-control" placeholder="Sobrenome">
-            </div>
-            <div class="form group col-md-4">
-              <label for="exampleFormControlInput1">Telefone</label>
-              <input type="text" class="form-control" placeholder="Telefone">
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Endereço de email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
-          </div>
-          <div class="form-group">
-            <label for="inputAddress">Assunto</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Assunto">
-          </div>
-          <div class="form-group">
-            <label for="exampleFormControlTextarea1">Mensagem</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
->>>>>>> main
     </div> 
     <div class = "containermapa">
         <div class = "mapa">
@@ -152,16 +69,12 @@
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3705.5743164749247!2d-43.35785178558967!3d-21.758022703356612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x989b64bb93da7b%3A0xba4e334b893fbe6!2sAv.%20Oleg%C3%A1rio%20Maciel%20-%20Santa%20Helena%2C%20Juiz%20de%20Fora%20-%20MG!5e0!3m2!1spt-BR!2sbr!4v1621451903757!5m2!1spt-BR!2sbr" width="950" height="480" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
-<<<<<<< HEAD
 
     <?php require 'footer.php' ?>
-=======
->>>>>>> main
     
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<?php require 'footer.php' ?>
 </body>
 </html>

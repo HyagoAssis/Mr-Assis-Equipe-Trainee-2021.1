@@ -24,7 +24,7 @@ body{
 }
 
 .Lista{
-    max-height: 400px;
+    width: 100% !important;
 }
 
 .card{

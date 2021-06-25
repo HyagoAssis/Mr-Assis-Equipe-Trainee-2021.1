@@ -20,7 +20,7 @@
 
                 <!--Footer-->
                     <div class="modal-footer flex-center">
-                    <form action="/categorias/delete" method="POST">
+                    <form action="/admin/categorias/delete" method="POST">
                         <input type="hidden" value="<?= $categoria->id ?>" name="id">
                         <button type="submit" class="btn  btn-outline-danger">Sim</button>
                     </form>

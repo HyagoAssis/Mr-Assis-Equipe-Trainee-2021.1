@@ -1,38 +1,4 @@
 <!DOCTYPE html>
-<?php
-
-// if($_SERVER['REQUEST_METHOD'] == 'POST'){
-   
-//    $erro ='';
-   
-//    if(!isset($_POST['text_nome']) ||
-//       !isset($_POST['text_sobrenome']) ||
-//       !isset($_POST['text_email']) ||
-//       !isset($_POST['text_assunto']) || 
-//       !isset($_POST['text_telefone'])){
-       
-//        $erro = "Pelo menos um dos campos não existe";
-//    }
-// }
-
-// if(empty($erro)){
-   
-//   //  $nome = $_POST['text_nome'];
-//   //  $sobrenome = $_POST['text_sobrenome'];
-//    $email = $_POST['text_email'];
-//   //  $assunto = $_POST['text_assunto'];
-//   //  $mensagem = $_POST['text_mensagem'];
-   
-   
-//    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-//        $erro = "Endereço de e-mail inválido";
-//    }
-//    if(empty($erro)){
-//        include('envia-email.php');
-//    }
-//}
-
-?>
 <html lang="pt-BR">
     <head>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -53,23 +19,16 @@
           <link rel="stylesheet" href="css/mdb.min.css" />
         <!-- Required meta tags -->
         <meta charset="utf-8">
-<<<<<<< HEAD:Mr-Assis/app/views/view-contato.view.php
 
         <?php require 'links-navbar.php' ?>
 
-=======
->>>>>>> main:Mr-Assis/app/views/contato.view.php
         <link rel="stylesheet" href="../../public/css/stylescontato.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
           
       </head>
 <body>
-<<<<<<< HEAD:Mr-Assis/app/views/view-contato.view.php
     <?php require 'navbar.view.php' ?>
     
-=======
-<?php require 'navbar.view.php' ?>
->>>>>>> main:Mr-Assis/app/views/contato.view.php
     <div class = "container">
         <form action="contato/email" method="POST" name="form_contato" id="form_contato">
           <div class="form-row">

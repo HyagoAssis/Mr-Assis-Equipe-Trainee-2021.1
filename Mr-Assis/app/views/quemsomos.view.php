@@ -8,20 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!--LINK FONTE-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <?php require 'links-navbar.php'?>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <!--LINK CSS-->
   <link rel="stylesheet" type="text/css" href="../../public/css/stylesquemsomos.css">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  
+  <?php require 'links-navbar.php'?>
   <title>Quem somos?</title>
 </head>
 
 <body>
-  
-  <!--NAV BAR-->
-  <?php require 'navbar.view.php' ?>
+  <?php require 'navbar.view.php' ?>  
+
+
   <!--Imagem da equipe do quem somos-->
   <div class="equipegeral">
   <div class="imgequipe">
@@ -76,6 +77,7 @@
    </div>
   </div>
   
+  <?php require 'footer.php'?>
   <!-- JavaScript (Opcional) -->
   <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -87,7 +89,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-    <?php require 'footer.php'?>
 </body>
 
 </html>

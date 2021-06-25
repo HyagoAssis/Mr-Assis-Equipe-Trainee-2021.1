@@ -1,16 +1,15 @@
 <?php
 use App\Core\Router;
-$router->get('categorias','CategoriasController@categorias');
-$router->post('categorias/create','CategoriasController@create');
-$router->post('categorias/delete','CategoriasController@delete');
-$router->post('categorias/edit','CategoriasController@edit');
+$router->get('admin/categorias','CategoriasController@categorias');
+$router->post('admin/categorias/create','CategoriasController@create');
+$router->post('admin/categorias/delete','CategoriasController@delete');
+$router->post('admin/categorias/edit','CategoriasController@edit');
 $router->get('quemsomos','quemsomoscontatocontroller@quemsomos');
 $router->get('contato','quemsomoscontatocontroller@contato');
 $router->get('login','loginController@index');
 $router->post('login/log','loginController@login');
 $router->get('login/logout','loginController@logout');
 
-$router->get('','UsuariosController@index');
 
 $router->get('admin/usuarios', 'UsuariosController@admUsuarios');
 

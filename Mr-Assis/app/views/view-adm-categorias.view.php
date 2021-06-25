@@ -24,7 +24,7 @@
   <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
     <div class="mb-4">
       <h2>Criar Categoria</h2>
-      <form action="/categorias/create" method="POST">
+      <form action="/admin/categorias/create" method="POST">
         <div class="form-group">
           <label for="inputAddress">Nome Categoria</label>
           <input type="text" name="nome" class="form-control" id="inputAddress" placeholder="Nome Categoria" required>
@@ -52,7 +52,7 @@
             <?php require 'modal-edit-cat.php' ?>
             <tr>
               <td class="id"><?= $categoria->id ?> </td>
-              <td class="name"><?= $categoria->name ?> </td>
+              <td class="name"><?= $categoria->nome ?> </td>
               <td class="categoriaeditar"><input type="image" data-toggle="modal" data-target="#edite<?= $categoria->id ?>" src="https://img.icons8.com/windows/32/000000/file-configuration.png"></input></td>      
               <td class="categoriadeletar"><input type="image" data-toggle="modal" data-target="#delete<?= $categoria->id ?>" src="https://img.icons8.com/offices/30/000000/delete-sign.png"></input></td>           
             </tr>

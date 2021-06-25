@@ -20,7 +20,7 @@ class loginController {
         $email= $_POST['email'];
         $senha= $_POST['senha'];
 
-       $var = App::get('database')->login('usuario',$email,$senha);
+       $var = App::get('database')->login('usuarios',$email,$senha);
 
        if (empty($var)){
                     
@@ -32,7 +32,7 @@ class loginController {
         $_SESSION['user'] = 'ativo';
         
 
-        return view('viewHomeAdm');
+        return view('admin-home');
        }
         
 

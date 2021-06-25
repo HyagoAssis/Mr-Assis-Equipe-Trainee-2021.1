@@ -32,7 +32,7 @@ class QueryBuilder
     public function insereCategoria($tables, $parametros)
     {
 
-        $sql = "INSERT INTO `{$tables}`(`name`) VALUES ('{$parametros['name']}')";
+        $sql = "INSERT INTO `{$tables}`(`nome`) VALUES ('{$parametros['nome']}')";
 
         try {
             $stmt = $this->pdo->prepare($sql);

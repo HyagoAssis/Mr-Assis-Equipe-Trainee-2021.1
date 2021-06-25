@@ -5,24 +5,14 @@ use App\Core\App;
 
 class PagesController {
 
-<<<<<<< HEAD
-    public function index()
-    {   
-        return view('index');
-    } 
-    
-    // public function contato(){
-
-    //     return view('view-contato');
-
-    // }
-=======
 
     public function index()
     {   
-        return view('index');
+        $produtos = App::get('database')->selectAll('produtos');
+
+
+        return view('home', compact('produtos'));
     }
     
         
->>>>>>> main
 }

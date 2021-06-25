@@ -19,28 +19,28 @@ class CategoriasController {
         public function create(){
 
             $parametros = [
-                'name'=> $_POST['nome']
+                'nome'=> $_POST['nome']
             ];
             App::get('database')->insereCategoria('categorias',$parametros);
 
-            header('Location: /categorias');
+            header('Location: /admin/categorias');
 
         }
 
         public function delete(){
 
             App::get('database')->delete('categorias',$_POST['id']);
-            header('Location: /categorias');
+            header('Location: /admin/categorias');
         }
         public function edit(){
 
             $parametros = [
-                'name'=> $_POST['name'],
+                'nome'=> $_POST['nome'],
                 'id'=> $_POST['id']
             ];
             App::get('database')->edit('categorias',$parametros);
 
-            header('Location: /categorias');
+            header('Location: /admin/categorias');
 
         }
 }

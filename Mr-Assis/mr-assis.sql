@@ -3,11 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-<<<<<<< HEAD
--- Tempo de geração: 21-Jun-2021 às 15:53
-=======
 -- Tempo de geração: 21-Jun-2021 às 17:55
->>>>>>> main
 -- Versão do servidor: 10.4.19-MariaDB
 -- versão do PHP: 8.0.6
 
@@ -28,7 +24,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
-<<<<<<< HEAD
 -- Estrutura da tabela `usuarios`
 --
 
@@ -46,7 +41,6 @@ CREATE TABLE `usuarios` (
 
 INSERT INTO `usuarios` (`nome`, `email`, `senha`, `foto`, `id`) VALUES
 ('Gabriela Gazola', 'gabimagkta@hotmail.com', '1254', 'fotoLoja3.jpg', 25);
-=======
 -- Estrutura da tabela `categorias`
 --
 
@@ -99,18 +93,15 @@ INSERT INTO `produtos` (`id`, `nome`, `preco`, `categoria`, `descricao`, `imagem
 (9, 'Teclado Razer Rosinha lindo', '700.00', 'Periféricos', 'Lindo kawai tecladinho ui uiui ', 'Teclado Razer Blackwidow Tournament Chroma V2 (quartz).jpg', 7),
 (10, 'Processador dos avengers', '5000.00', 'Peças', 'HOMEM DE FERRO INVEJA ESSE PROCESSADOR', 'processador-avenger.jpg', 1),
 (11, 'Notebook gamer asus', '1700.90', 'Computadores', 'Notebook que da pra jogar e viajar e jogar e tem luizinha gamer pra toda familia', 'computador.jpg', 7);
->>>>>>> main
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
-<<<<<<< HEAD
 -- Índices para tabela `usuarios`
 --
 ALTER TABLE `usuarios`
-=======
 -- Índices para tabela `categorias`
 --
 ALTER TABLE `categorias`
@@ -120,7 +111,6 @@ ALTER TABLE `categorias`
 -- Índices para tabela `produtos`
 --
 ALTER TABLE `produtos`
->>>>>>> main
   ADD PRIMARY KEY (`id`);
 
 --
@@ -128,12 +118,10 @@ ALTER TABLE `produtos`
 --
 
 --
-<<<<<<< HEAD
 -- AUTO_INCREMENT de tabela `usuarios`
 --
 ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-=======
 -- AUTO_INCREMENT de tabela `categorias`
 --
 ALTER TABLE `categorias`
@@ -144,7 +132,6 @@ ALTER TABLE `categorias`
 --
 ALTER TABLE `produtos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
->>>>>>> main
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
