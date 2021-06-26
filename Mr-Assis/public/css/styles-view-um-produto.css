@@ -17,9 +17,13 @@ body{
     background-color: white;
     border-radius: 5px;
 }
+.texto{
+    margin: 2%;
+}
 
 .img-produto{
     max-width: 250px;
+    padding: 0 !important;
 }
 .barras{
     background-color: #FF1616;

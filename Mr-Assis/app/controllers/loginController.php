@@ -32,7 +32,7 @@ class loginController {
         $_SESSION['user'] = 'ativo';
         
 
-        return view('admin-home');
+        return view('adm/admin-home');
        }
         
 

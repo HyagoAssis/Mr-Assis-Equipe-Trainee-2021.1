@@ -9,10 +9,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="/categorias/edit" method="POST">
+          <form action="/admin/categorias/edit" method="POST">
             <div class="form-group">
               <label for="formGroupExampleInput"></label>
-              <input type="text" value="<?=$categoria->nome?>"class="form-control" id="formGroupExampleInput" name="name" >
+              <input type="text" value="<?=$categoria->nome?>"class="form-control" id="formGroupExampleInput" name="nome" >
               <input type="hidden" value="<?=$categoria->id?>" name='id'>
             </div>          
         </div>

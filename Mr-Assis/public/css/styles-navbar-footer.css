@@ -3,8 +3,10 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 .logo{
-	width: 20%;
-	padding-left: 5%;
+	width: 300px !important;
+}
+.botao{
+	margin: 0px auto;
 }
 .navchanges{
 	font-size: 18px;
@@ -18,6 +20,10 @@ body{
 .img2{
 	width: 80% ;
 	padding-top: 8%;	
+}
+footer{
+    border-top:10px solid rgb(180, 33, 33);
+    border-radius: 5px;
 }
 
 @media (max-width: 1000px){

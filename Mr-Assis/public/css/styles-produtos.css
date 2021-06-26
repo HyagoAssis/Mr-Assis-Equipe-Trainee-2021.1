@@ -3,7 +3,7 @@ body{
 }
 
 .produtos{
-    margin-left: 0 !important;
+    margin: calc( 5% * 2) 0;
     min-height: 494px;
 }
 
@@ -23,6 +23,7 @@ body{
 }
 .zoom img{
     max-width: 100%;
+    min-width: 50px;
     transition: all 0.3s;
 }
 .zoom img:hover{

@@ -10,7 +10,7 @@ class UsuariosController{
     {
         $usuarios = App::get('database')->selectAll('usuarios');
     
-        return view('view-admin-usuarios', compact('usuarios'));
+        return view('adm/view-admin-usuarios', compact('usuarios'));
     }
     public function admUsuarios()
     {
@@ -19,7 +19,7 @@ class UsuariosController{
         $tables = [
             'usuarios' => $usuarios
         ];
-        return view('view-admin-usuarios', $tables);
+        return view('adm/view-admin-usuarios', $tables);
     }
 
     public function create()

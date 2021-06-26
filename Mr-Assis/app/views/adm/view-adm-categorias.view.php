@@ -48,8 +48,8 @@
         </thead>
         <tbody>
           <?php foreach ($categorias as $categoria) : ?>
-            <?php require 'modal-delete-cat.php' ?>
-            <?php require 'modal-edit-cat.php' ?>
+            <?php require 'modal/modal-delete-cat.php' ?>
+            <?php require 'modal/modal-edit-cat.php' ?>
             <tr>
               <td class="id"><?= $categoria->id ?> </td>
               <td class="name"><?= $categoria->nome ?> </td>

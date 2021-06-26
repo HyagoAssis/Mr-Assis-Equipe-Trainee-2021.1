@@ -12,7 +12,7 @@ class CategoriasController {
         $categorias = App::get('database') ->selectAll('categorias');
 
 
-        return view('view-adm-categorias',compact('categorias'));       
+        return view('adm/view-adm-categorias',compact('categorias'));       
     }
 
     

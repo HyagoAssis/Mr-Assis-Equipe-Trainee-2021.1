@@ -8,7 +8,7 @@ class ProdutosController {
 
     public function adm()
     {
-        return view('admin-home');
+        return view('adm/admin-home');
     }
     public function admProdutos()
     {
@@ -20,7 +20,7 @@ class ProdutosController {
             'produtos' => $produtos,
             'categorias'=> $categorias,
         ];
-        return view('adimin-produtos', $tables);
+        return view('adm/adimin-produtos', $tables);
     }
     public function produtoView()
     {

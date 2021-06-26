@@ -7,39 +7,12 @@
 <!------ Include the above in your HEAD tag ---------->
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
-  <link rel="manifest" href="img/icons/site.webmanifest">
-
+  <?php require 'head.php' ?>
   <!-- CSS -->
   <link rel="stylesheet" type="text/css" href="../../public/css/stylesLogin.css" media="screen" />
 
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-  <!-- Fonte -->
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-  <!-- Font Aws -->
-  <script src="https://kit.fontawesome.com/410c009f17.js" crossorigin="anonymous"></script>
-
-  <!-- links do site MDB -->
-  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon" />
-
-  <!-- MDB -->
-  <link rel="stylesheet" href="css/mdb.min.css" />
-
+  
   <title>Home - Mr. Assis</title>
 </head>
 

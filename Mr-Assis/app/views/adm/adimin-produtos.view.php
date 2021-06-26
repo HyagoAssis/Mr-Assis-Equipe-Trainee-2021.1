@@ -44,13 +44,13 @@
                 <?php foreach ($produtos as $produto) :?>
 
                   <!-- modal delete -->
-                  <?php require 'modal-delete-prod.php' ?>
+                  <?php require 'modal/modal-delete-prod.php' ?>
 
                   <!-- modal vizualizar -->
-                  <?php require 'modal-view.php' ?>
+                  <?php require 'modal/modal-view.php' ?>
 
                   <!-- modal edit -->
-                  <?php require 'modal-edit-prod.php' ?>
+                  <?php require 'modal/modal-edit-prod.php' ?>
 
 
                 <tr>
